@@ -81,41 +81,44 @@ function Navbar() {
         left="0"
         overflowY="auto"
         flexDir="column"
+        bg="#4f6a8f"
       >
           <ScaleFade initialScale={0.9} in={isOpen}>
           <IconButton
               aria-label="Close Menu"
               size="lg"
-              bg="white"
+              bg="#4f6a8f"
               mr={2}
               icon={<CloseIcon />}
               display={{ base: "block", md: "none" }}
               onClick={() => {onToggle(); changeDisplay("none");}}
               w="100%"
+              _hover={{bg: "#88a2bc"}}
+              color="white"
             />
-          <VStack spacing={2}>
+          <VStack spacing={2} color="white">
             <NextLink href="/" passHref>
-              <Button variant="ghost" w="100%">
+              <Button variant="ghost" w="100%" _hover={{bg: "#88a2bc"}}>
                 Despre Arduino
               </Button>
             </NextLink>
             <NextLink href="/" passHref>
-              <Button variant="ghost" w="100%">
+              <Button variant="ghost" w="100%" _hover={{bg: "#88a2bc"}}>
                 Instalare
               </Button>
             </NextLink>
             <NextLink href="/" passHref>
-              <Button variant="ghost" w="100%">
+              <Button variant="ghost" w="100%" _hover={{bg: "#88a2bc"}}>
                 Senzori
               </Button>
             </NextLink>
             <NextLink href="/" passHref>
-              <Button variant="ghost" w="100%">
+              <Button variant="ghost" w="100%" _hover={{bg: "#88a2bc"}}>
                 Proiecte
               </Button>
             </NextLink>
             <NextLink href="/" passHref>
-              <Button variant="ghost" w="100%">
+              <Button variant="ghost" w="100%" _hover={{bg: "#88a2bc"}}>
                 Lectii
               </Button>
             </NextLink>
