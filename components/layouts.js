@@ -1,11 +1,10 @@
-import { Button, ButtonGroup, IconButton } from "@chakra-ui/button";
+import { Button, IconButton } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Center,
   Container,
-  Flex,
   Grid,
   Heading,
   Link,
@@ -13,9 +12,7 @@ import {
   Stack,
   VStack,
 } from "@chakra-ui/layout";
-import { MenuIcon } from "@chakra-ui/menu";
-import { Switch } from "@chakra-ui/switch";
-import { Collapse, ScaleFade, Slide } from "@chakra-ui/transition";
+import { ScaleFade } from "@chakra-ui/transition";
 import Head from "next/head";
 import NextLink from "next/link";
 import React, { useState } from "react";
