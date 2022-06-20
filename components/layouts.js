@@ -1,4 +1,5 @@
 import { Button, ButtonGroup, IconButton } from "@chakra-ui/button";
+import { useDisclosure } from "@chakra-ui/hooks";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -14,12 +15,14 @@ import {
 } from "@chakra-ui/layout";
 import { MenuIcon } from "@chakra-ui/menu";
 import { Switch } from "@chakra-ui/switch";
+import { Collapse, ScaleFade, Slide } from "@chakra-ui/transition";
 import Head from "next/head";
 import NextLink from "next/link";
 import React, { useState } from "react";
 
 function Navbar() {
   const [display, changeDisplay] = useState("none");
+  const { isOpen, onToggle } = useDisclosure();
   return (
     <Box>
       <Container maxW={{ base: "container.xl" }}>
@@ -64,7 +67,10 @@ function Navbar() {
             mr={2}
             icon={<HamburgerIcon />}
             display={{ base: "block", md: "none" }}
-            onClick={() => changeDisplay("flex")}
+            onClick={() => {
+              changeDisplay("flex");
+              onToggle();
+            }}
           />
         </Stack>
       </Container>
@@ -79,32 +85,45 @@ function Navbar() {
         overflowY="auto"
         flexDir="column"
       >
-        <IconButton
-          aria-label="Close Menu"
-          size="lg"
-          bg="white"
-          mr={2}
-          icon={<CloseIcon />}
-          display={{ base: "block", md: "none" }}
-          onClick={() => changeDisplay("none")}
-        />
-        <VStack spacing={2}>
-          <NextLink href="/" passHref>
-            <Button variant="ghost" w="100%">Despre Arduino</Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-            <Button variant="ghost" w="100%">Instalare</Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-            <Button variant="ghost" w="100%">Senzori</Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-            <Button variant="ghost" w="100%">Proiecte</Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-            <Button variant="ghost" w="100%">Lectii</Button>
-          </NextLink>
-        </VStack>
+          <ScaleFade initialScale={0.9} in={isOpen}>
+          <IconButton
+              aria-label="Close Menu"
+              size="lg"
+              bg="white"
+              mr={2}
+              icon={<CloseIcon />}
+              display={{ base: "block", md: "none" }}
+              onClick={() => {onToggle(); changeDisplay("none");}}
+              w="100%"
+            />
+          <VStack spacing={2}>
+            <NextLink href="/" passHref>
+              <Button variant="ghost" w="100%">
+                Despre Arduino
+              </Button>
+            </NextLink>
+            <NextLink href="/" passHref>
+              <Button variant="ghost" w="100%">
+                Instalare
+              </Button>
+            </NextLink>
+            <NextLink href="/" passHref>
+              <Button variant="ghost" w="100%">
+                Senzori
+              </Button>
+            </NextLink>
+            <NextLink href="/" passHref>
+              <Button variant="ghost" w="100%">
+                Proiecte
+              </Button>
+            </NextLink>
+            <NextLink href="/" passHref>
+              <Button variant="ghost" w="100%">
+                Lectii
+              </Button>
+            </NextLink>
+          </VStack>
+          </ScaleFade>
       </Box>
     </Box>
   );
