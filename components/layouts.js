@@ -12,14 +12,23 @@ import {
   Stack,
   VStack,
 } from "@chakra-ui/layout";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+} from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/transition";
 import Head from "next/head";
 import NextLink from "next/link";
 import React, { useState } from "react";
 
 function Navbar() {
-  const [display, changeDisplay] = useState("none");
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
   return (
     <Box>
       <Container maxW={{ base: "container.xl" }}>
@@ -64,14 +73,78 @@ function Navbar() {
             mr={2}
             icon={<HamburgerIcon />}
             display={{ base: "block", md: "none" }}
-            onClick={() => {
-              changeDisplay("flex");
-              onToggle();
-            }}
+            ref={btnRef}
+            onClick={onOpen}
           />
         </Stack>
       </Container>
-      <Box
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton size="lg" />
+
+          <DrawerHeader></DrawerHeader>
+
+          <DrawerBody>
+            <VStack spacing={4} mt={5}>
+              <NextLink href="/" passHref>
+                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                  Despre Arduino
+                </Button>
+              </NextLink>
+              <NextLink href="/" passHref>
+                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                  Instalare
+                </Button>
+              </NextLink>
+              <NextLink href="/" passHref>
+                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                  Senzori
+                </Button>
+              </NextLink>
+              <NextLink href="/" passHref>
+                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                  Proiecte
+                </Button>
+              </NextLink>
+              <NextLink href="/" passHref>
+                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                  Lectii
+                </Button>
+              </NextLink>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </Box>
+  );
+}
+
+export default function Layout({ title, children }) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <Grid minH="100vh">
+        <VStack align="stretch" w="full" spacing={8}>
+          <Navbar />
+          <Box as="main" h="full">
+            {children}
+          </Box>
+        </VStack>
+      </Grid>
+    </>
+  );
+}
+
+{
+  /* <Box
         w="100vw"
         display={display}
         zIndex={20}
@@ -124,25 +197,5 @@ function Navbar() {
             </NextLink>
           </VStack>
           </ScaleFade>
-      </Box>
-    </Box>
-  );
-}
-
-export default function Layout({ title, children }) {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <Grid minH="100vh">
-        <VStack align="stretch" w="full" spacing={8}>
-          <Navbar />
-          <Box as="main" h="full">
-            {children}
-          </Box>
-        </VStack>
-      </Grid>
-    </>
-  );
+      </Box> */
 }
