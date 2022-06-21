@@ -1,6 +1,6 @@
 import { Button, IconButton } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Box,
   Center,
@@ -11,8 +11,11 @@ import {
   Spacer,
   Stack,
   VStack,
+  Flex,
+  Divider,
 } from "@chakra-ui/layout";
 import {
+  DarkMode,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -20,6 +23,9 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  LightMode,
+  Tooltip,
+  useColorMode,
 } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/transition";
 import Head from "next/head";
@@ -29,8 +35,9 @@ import React, { useState } from "react";
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box>
+    <Box mt={3}>
       <Container maxW={{ base: "container.xl" }}>
         <Stack spacing={4} direction="row">
           <Heading>Arduino</Heading>
@@ -67,6 +74,15 @@ function Navbar() {
             </Center>
           </Stack>
           <Spacer />
+          <Tooltip label="Beta Feature!" aria-label="A tooltip">
+              <IconButton
+                aria-label={colorMode}
+                size="lg"
+                mr={2}
+                icon={<MoonIcon />}
+                onClick={() => toggleColorMode()}
+              />
+          </Tooltip>
           <IconButton
             aria-label="Open Menu"
             size="lg"
@@ -132,8 +148,9 @@ export default function Layout({ title, children }) {
         <title>{title}</title>
       </Head>
       <Grid minH="100vh">
-        <VStack align="stretch" w="full" spacing={8}>
+        <VStack align="stretch" w="full" spacing={3}>
           <Navbar />
+          <Divider />
           <Box as="main" h="full">
             {children}
           </Box>
