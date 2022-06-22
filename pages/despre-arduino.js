@@ -189,10 +189,7 @@ function Content() {
                 Acesta este folositor cand codul pe care il avem nu se repeta.
               </Text>
               <Box>
-                <Image
-                  src="buton_reset.jpeg"
-                  alt="Buton Reset"
-                />
+                <Image src="buton_reset.jpeg" alt="Buton Reset" />
               </Box>
             </VStack>
           </Box>
