@@ -48,7 +48,7 @@ function Navbar() {
             display={{ base: "none", md: "flex" }}
           >
             <Center>
-              <NextLink href="/" passHref>
+              <NextLink href="/despre-arduino" passHref>
                 <Button variant="ghost">Despre Arduino</Button>
               </NextLink>
             </Center>
@@ -145,7 +145,7 @@ export default function Layout({ title, children }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>Arduino :: {title}</title>
       </Head>
       <Grid minH="100vh">
         <VStack align="stretch" w="full" spacing={3}>

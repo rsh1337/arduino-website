@@ -8,7 +8,7 @@ import {
   Stack,
   Flex,
 } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
+import { Button, LightMode } from "@chakra-ui/react";
 import Head from "next/head";
 
 import Layout from "../components/layouts";
@@ -33,7 +33,7 @@ function Content() {
           </Heading>
         </Center>
         <Center mt={7}>
-          <Text noOfLines={[3]}>
+          <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean
             et tortor at risus viverra adipiscing at in. Scelerisque mauris
@@ -58,7 +58,26 @@ function Content() {
             >
               <Heading size="lg">INVETI PROGRAMARE</Heading>
               <Center mt={6}>
-                <Text noOfLines={5}>
+                <Text>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Aenean et tortor at risus viverra adipiscing at in.
+                  Scelerisque mauris pellentesque pulvinar pellentesque
+                  habitant. Ac turpis egestas sed tempus urna et. Ultricies mi
+                  eget mauris pharetra et ultrices neque ornare aenean.
+                </Text>
+              </Center>
+            </Box>
+            <Box
+              maxW="sm"
+              borderWidth="1px"
+              borderRadius="lg"
+              overflow="hidden"
+              p={4}
+            >
+              <Heading size="lg">INVETI SA FACI ROBOTI</Heading>
+              <Center mt={6}>
+                <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Aenean et tortor at risus viverra adipiscing at in.
@@ -77,26 +96,7 @@ function Content() {
             >
               <Heading size="lg">INVETI PROGRAMARE</Heading>
               <Center mt={6}>
-                <Text noOfLines={5}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Aenean et tortor at risus viverra adipiscing at in.
-                  Scelerisque mauris pellentesque pulvinar pellentesque
-                  habitant. Ac turpis egestas sed tempus urna et. Ultricies mi
-                  eget mauris pharetra et ultrices neque ornare aenean.
-                </Text>
-              </Center>
-            </Box>
-            <Box
-              maxW="sm"
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              p={4}
-            >
-              <Heading size="lg">INVETI PROGRAMARE</Heading>
-              <Center mt={6}>
-                <Text noOfLines={5}>
+                <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Aenean et tortor at risus viverra adipiscing at in.
@@ -115,8 +115,10 @@ function Content() {
 
 export default function Home() {
   return (
-    <Layout title="Home">
-      <Content />
-    </Layout>
+    <LightMode>
+      <Layout title="Home">
+        <Content />
+      </Layout>
+    </LightMode>
   );
 }
