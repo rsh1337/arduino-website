@@ -158,8 +158,8 @@ function Content() {
 
               <Heading>Pini de intrare analog</Heading>
               <Text fontSize="lg">
-                Placa Arduino are 6 pini de iesire analog, numerotate de la "A0"
-                la "A5". Cu acesti pini putem citi semnalul de la un senzor
+                Placa Arduino are 6 pini de iesire analog, numerotate de la A0
+                la A5. Cu acesti pini putem citi semnalul de la un senzor
                 analog ca de exemplu senzorul de temperatura si il putem
                 converti intr-o valoare digitala pentru a putea fi citit de
                 sistem.
