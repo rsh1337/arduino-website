@@ -108,7 +108,7 @@ function Navbar() {
 
           <DrawerBody>
             <VStack spacing={4} mt={5}>
-              <NextLink href="/" passHref>
+              <NextLink href="/despre-arduino" passHref>
                 <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
                   Despre Arduino
                 </Button>
