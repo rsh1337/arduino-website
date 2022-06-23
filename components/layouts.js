@@ -29,90 +29,100 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <Flex direction="column" position="sticky" top="0px" bg="white" zIndex="dropdown">
-    <Box mt={3}>
-      <Container maxW={{ base: "container.xl" }}>
-        <Stack spacing={4} direction="row">
-          <Heading>Arduino</Heading>
-          <Spacer />
-          <Stack
-            spacing={4}
-            direction="row"
-            display={{ base: "none", md: "flex" }}
-          >
-            <Center>
-              <NextLink href="/documentatie" passHref>
-                <Button variant="ghost">Documentatie</Button>
-              </NextLink>
-            </Center>
-            <Center>
-              <NextLink href="#" passHref>
-                <Button variant="ghost">Senzori</Button>
-              </NextLink>
-            </Center>
-            <Center>
-              <NextLink href="#" passHref>
-                <Button variant="ghost">Proiecte</Button>
-              </NextLink>
-            </Center>
-            <Center>
-              <NextLink href="#" passHref>
-                <Button variant="ghost">Lectii</Button>
-              </NextLink>
-            </Center>
+    <Flex
+      direction="column"
+      position="sticky"
+      top="0px"
+      bg="white"
+      zIndex="dropdown"
+    >
+      <Box mt={3}>
+        <Container maxW={{ base: "container.xl" }}>
+          <Stack spacing={4} direction="row">
+            <NextLink href="/">
+              <Button variant="ghost">
+                <Heading>Arduino</Heading>
+              </Button>
+            </NextLink>
+            <Spacer />
+            <Stack
+              spacing={4}
+              direction="row"
+              display={{ base: "none", md: "flex" }}
+            >
+              <Center>
+                <NextLink href="/documentatie" passHref>
+                  <Button variant="ghost">Documentatie</Button>
+                </NextLink>
+              </Center>
+              <Center>
+                <NextLink href="#" passHref>
+                  <Button variant="ghost">Senzori</Button>
+                </NextLink>
+              </Center>
+              <Center>
+                <NextLink href="#" passHref>
+                  <Button variant="ghost">Proiecte</Button>
+                </NextLink>
+              </Center>
+              <Center>
+                <NextLink href="#" passHref>
+                  <Button variant="ghost">Lectii</Button>
+                </NextLink>
+              </Center>
+            </Stack>
+            <Spacer />
+            <IconButton
+              aria-label="Open Menu"
+              size="lg"
+              mr={2}
+              icon={<HamburgerIcon />}
+              display={{ base: "block", md: "none" }}
+              ref={btnRef}
+              onClick={onOpen}
+            />
           </Stack>
-          <Spacer />
-          <IconButton
-            aria-label="Open Menu"
-            size="lg"
-            mr={2}
-            icon={<HamburgerIcon />}
-            display={{ base: "block", md: "none" }}
-            ref={btnRef}
-            onClick={onOpen}
-          />
-        </Stack>
-      </Container>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton size="lg" />
+        </Container>
+        <Drawer
+          isOpen={isOpen}
+          placement="right"
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton size="lg" />
 
-          <DrawerHeader></DrawerHeader>
+            <DrawerHeader></DrawerHeader>
 
-          <DrawerBody>
-            <VStack spacing={4} mt={5}>
-              <NextLink href="/documentatie" passHref>
-                <Button variant="ghost" w="100%">
-                  Documentatie
-                </Button>
-              </NextLink>
-              <NextLink href="#" passHref>
-                <Button variant="ghost" w="100%">
-                  Senzori
-                </Button>
-              </NextLink>
-              <NextLink href="#" passHref>
-                <Button variant="ghost" w="100%">
-                  Proiecte
-                </Button>
-              </NextLink>
-              <NextLink href="#" passHref>
-                <Button variant="ghost" w="100%">
-                  Lectii
-                </Button>
-              </NextLink>
-            </VStack>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-    </Box>
-    <Divider mt="0.75rem"/>
+            <DrawerBody>
+              <VStack spacing={4} mt={5}>
+                <NextLink href="/documentatie" passHref>
+                  <Button variant="outline" w="100%">
+                    Documentatie
+                  </Button>
+                </NextLink>
+                <NextLink href="#" passHref>
+                  <Button variant="outline" w="100%">
+                    Senzori
+                  </Button>
+                </NextLink>
+                <NextLink href="#" passHref>
+                  <Button variant="outline" w="100%">
+                    Proiecte
+                  </Button>
+                </NextLink>
+                <NextLink href="#" passHref>
+                  <Button variant="outline" w="100%">
+                    Lectii
+                  </Button>
+                </NextLink>
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Box>
+      <Divider mt="0.75rem" />
     </Flex>
   );
 }
