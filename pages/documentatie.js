@@ -242,7 +242,7 @@ function Content() {
                 <Image src="buton_reset.jpeg" alt="Buton Reset" />
               </Box>
 
-              <Divider />
+              <Divider zIndex="hide"/>
               <Heading id="instalare-arduino-ide">
                 Instalare Arduino IDE
               </Heading>
