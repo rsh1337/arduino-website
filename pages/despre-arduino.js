@@ -21,7 +21,7 @@ import NextLink from "next/link";
 function Content() {
   return (
     <Box>
-      <Accordion allowToggle display={{ base: "block", md: "none" }}>
+      <Accordion allowToggle display={{ base: "block", md: "none" }} position="sticky">
         <AccordionItem>
           <AccordionButton>
             <Box flex="1" textAlign="center">
@@ -30,55 +30,9 @@ function Content() {
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
-            <Container>
+          <Container>
               <Box mb={2}>
-                <NextLink href="#">
-                  <Link as="b">Ce este arduino?</Link>
-                </NextLink>
-              </Box>
-              <Box mb={2}>
-                <NextLink href="#">
-                  <Link as="b">Componentele principale</Link>
-                </NextLink>
-              </Box>
-              <Container maxW="container.sm">
-                <Box mb={1}>
-                  <NextLink href="#">
-                    <Link>Conectare USB</Link>
-                  </NextLink>
-                </Box>
-                <Box mb={1}>
-                  <NextLink href="#">
-                    <Link>Alimentare externa</Link>
-                  </NextLink>
-                </Box>
-                <Box mb={1}>
-                  <NextLink href="#">
-                    <Link>Pini de intrare analog</Link>
-                  </NextLink>
-                </Box>
-                <Box mb={1}>
-                  <NextLink href="#">
-                    <Link>Pini de intrare/iesire digitala</Link>
-                  </NextLink>
-                </Box>
-                <Box mb={1}>
-                  <NextLink href="#">
-                    <Link>Buton de reset</Link>
-                  </NextLink>
-                </Box>
-              </Container>
-            </Container>
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-
-      <Container maxW={{ base: "container.xl" }} pt={70}>
-        <Flex>
-          <Box flex="1" display={{ base: "none", md: "flex" }}>
-            <Container>
-              <Box mb={2}>
-                <NextLink href="#">
+                <NextLink href="#ce-este-arduino">
                   <Link as="b">Ce este arduino?</Link>
                 </NextLink>
               </Box>
@@ -87,34 +41,87 @@ function Content() {
               </Box>
               <Container maxW="container.sm">
                 <Box mb={1}>
-                  <NextLink href="#">
+                  <NextLink href="#conectare-usb">
                     <Link>Conectare USB</Link>
                   </NextLink>
                 </Box>
                 <Box mb={1}>
-                  <NextLink href="#">
+                  <NextLink href="#alimentare-externa">
                     <Link>Alimentare externa</Link>
                   </NextLink>
                 </Box>
                 <Box mb={1}>
-                  <NextLink href="#">
+                  <NextLink href="#pini-de-intrare-analog">
                     <Link>Pini de intrare analog</Link>
                   </NextLink>
                 </Box>
                 <Box mb={1}>
-                  <NextLink href="#">
+                  <NextLink href="#pini-de-intrare-iesire-digitala">
                     <Link>Pini de intrare/iesire digitala</Link>
                   </NextLink>
                 </Box>
                 <Box mb={1}>
-                  <NextLink href="#">
+                  <NextLink href="#buton-de-reset">
                     <Link>Buton de reset</Link>
                   </NextLink>
                 </Box>
               </Container>
+              <Box mb={2}>
+                <NextLink href="/instalare" passHref>
+                  <Link as="b">Instalare</Link>
+                </NextLink>
+              </Box>
+            </Container>
+          </AccordionPanel>
+        </AccordionItem>
+      </Accordion>
+
+      <Container maxW={{ base: "container.xl" }} pt={70}>
+        <Flex> 
+          <Box flex="0 0 25%" display={{ base: "none", md: "flex" }}>
+            <Container>
+              <Box mb={2}>
+                <NextLink href="#ce-este-arduino">
+                  <Link as="b">Ce este arduino?</Link>
+                </NextLink>
+              </Box>
+              <Box mb={2}>
+                <Text as="b">Componentele principale</Text>
+              </Box>
+              <Container maxW="container.sm">
+                <Box mb={1}>
+                  <NextLink href="#conectare-usb">
+                    <Link>Conectare USB</Link>
+                  </NextLink>
+                </Box>
+                <Box mb={1}>
+                  <NextLink href="#alimentare-externa">
+                    <Link>Alimentare externa</Link>
+                  </NextLink>
+                </Box>
+                <Box mb={1}>
+                  <NextLink href="#pini-de-intrare-analog">
+                    <Link>Pini de intrare analog</Link>
+                  </NextLink>
+                </Box>
+                <Box mb={1}>
+                  <NextLink href="#pini-de-intrare-iesire-digitala">
+                    <Link>Pini de intrare/iesire digitala</Link>
+                  </NextLink>
+                </Box>
+                <Box mb={1}>
+                  <NextLink href="#buton-de-reset">
+                    <Link>Buton de reset</Link>
+                  </NextLink>
+                </Box>
+              </Container>
+              <Box mb={2}>
+                <NextLink href="/instalare" passHref>
+                  <Link as="b">Instalare</Link>
+                </NextLink>
+              </Box>
             </Container>
           </Box>
-
           <Divider
             height="321rem"
             orientation="vertical"
@@ -122,10 +129,9 @@ function Content() {
             ml={2}
             mr={2}
           />
-
-          <Box flex="3" mb={5}>
+          <Box flex={{base: "3", md: "0 0 73%"}} overflowY="auto" mb={5}>
             <VStack align="left" spacing={5}>
-              <Heading>Ce este Arduino?</Heading>
+                <Heading id="ce-este-arduino">Ce este Arduino?</Heading>
               <Text fontSize="lg">
                 Arduino este o platforma open source de creare a electronicilor,
                 care se bazeaza pe hardware si software gratuit, flexibil si
@@ -136,7 +142,7 @@ function Content() {
                 <Image src="arduino.png" alt="Arduino" />
               </Box>
 
-              <Heading>Conectare USB</Heading>
+              <Heading id="conectare-usb">Conectare USB</Heading>
               <Text fontSize="lg">
                 Acesta este un USB port care este folosit pentru a incarca un
                 program de pe aplicatia Arduino IDE in placa Arduino. De
@@ -146,7 +152,7 @@ function Content() {
                 <Image src="conectare_usb.jpeg" alt="Conectare USB" />
               </Box>
 
-              <Heading>Alimentarea externa</Heading>
+              <Heading id="alimentare-externa">Alimentarea externa</Heading>
               <Text fontSize="lg">
                 Placa poate fi alimentata la priza sau cu o baterie. Sursa de
                 curent poate fi conectata prin intrarea de 2.1mm aflata pe
@@ -156,7 +162,7 @@ function Content() {
                 <Image src="alimentare_externa.jpeg" alt="Alimentare Externa" />
               </Box>
 
-              <Heading>Pini de intrare analog</Heading>
+              <Heading id="pini-de-intrare-analog">Pini de intrare analog</Heading>
               <Text fontSize="lg">
                 Placa Arduino are 6 pini de iesire analog, numerotate de la A0
                 la A5. Cu acesti pini putem citi semnalul de la un senzor
@@ -168,7 +174,7 @@ function Content() {
                 <Image src="pini_in_analog.jpeg" alt="Intrare analog" />
               </Box>
 
-              <Heading>Pini de intrare/iesire digitala</Heading>
+              <Heading id="pini-de-intrare-iesire-digitala">Pini de intrare/iesire digitala</Heading>
               <Text fontSize="lg">
                 Acesti pini sunt numerotati de la 2 la 13 si pot fi folositi
                 pentru intrare cat si pentru iesire. Cand sunt folsiti pentru
@@ -183,7 +189,7 @@ function Content() {
                 />
               </Box>
 
-              <Heading>Butonul de reset</Heading>
+              <Heading id="buton-de-reset">Butonul de reset</Heading>
               <Text fontSize="lg">
                 Cand acesta este apasat, ruleaza programul iara de la inceput.
                 Acesta este folositor cand codul pe care il avem nu se repeta.

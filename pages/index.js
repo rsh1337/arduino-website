@@ -9,7 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/layout";
 import { Button, LightMode } from "@chakra-ui/react";
-import Head from "next/head";
+import NextLink from "next/link";
 
 import Layout from "../components/layouts";
 
@@ -42,9 +42,11 @@ function Content() {
             ornare aenean.
           </Text>
         </Center>
-        <Center mt={10}>
-          <Button colorScheme="green">Incepe acum</Button>
-        </Center>
+        <NextLink href="/despre-arduino" passHref>
+          <Center mt={10}>
+            <Button colorScheme="green">Incepe acum</Button>
+          </Center>
+        </NextLink>
       </Container>
       <Container maxW={{ base: "container.xl" }} mt={170} mb={5}>
         <Center>
@@ -115,10 +117,8 @@ function Content() {
 
 export default function Home() {
   return (
-    <LightMode>
       <Layout title="Home">
         <Content />
       </Layout>
-    </LightMode>
   );
 }

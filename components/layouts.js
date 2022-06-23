@@ -49,12 +49,7 @@ function Navbar() {
           >
             <Center>
               <NextLink href="/despre-arduino" passHref>
-                <Button variant="ghost">Despre Arduino</Button>
-              </NextLink>
-            </Center>
-            <Center>
-              <NextLink href="#" passHref>
-                <Button variant="ghost">Instalare</Button>
+                <Button variant="ghost">Documentatie</Button>
               </NextLink>
             </Center>
             <Center>
