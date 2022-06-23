@@ -256,59 +256,59 @@ function Content() {
               </Link>
               <Carousel>
                 <Box>
-                  <Image src="ide-1.jpeg" />
+                  <Image src="ide-1.jpeg" alt="Instalare IDE Pasul 1"/>
                   <Text className="legend">Apasam pe butonul SOFTWARE</Text>
                 </Box>
                 <Box>
-                  <Image src="ide-2.jpeg" />
+                  <Image src="ide-2.jpeg" alt="Instalare IDE Pasul 2"/>
                   <Text className="legend">
                     Apasam click pe prima optiune de download
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-3.jpeg" />
+                  <Image src="ide-3.jpeg" alt="Instalare IDE Pasul 3"/>
                   <Text className="legend">
                     Apasam pe butonul unde scrie JUST DOWNLOAD si dechidem
                     aplicatia
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-4.jpeg" />
+                  <Image src="ide-4.jpeg" alt="Instalare IDE Pasul 4"/>
                   <Text className="legend">
                     Acceptam termenii si conditiile apasand pe butonul I Agree
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-5.jpeg" />
+                  <Image src="ide-5.jpeg" alt="Instalare IDE Pasul 5"/>
                   <Text className="legend">Apasam pe butonul Next</Text>
                 </Box>
                 <Box>
-                  <Image src="ide-6.jpeg" />
+                  <Image src="ide-6.jpeg" alt="Instalare IDE Pasul 6"/>
                   <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
                 <Box>
-                  <Image src="ide-7.jpeg" />
+                  <Image src="ide-7.jpeg" alt="Instalare IDE Pasul 7"/>
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-8.jpeg" />
+                  <Image src="ide-8.jpeg" alt="Instalare IDE Pasul 8"/>
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-9.jpeg" />
+                  <Image src="ide-9.jpeg" alt="Instalare IDE Pasul 9"/>
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-10.jpeg" />
+                  <Image src="ide-10.jpeg" alt="Instalare IDE Pasul 10"/>
                   <Text className="legend">
                     Apasam pe butonul close si o sa gasim aplicatia pe desktop
                   </Text>
@@ -336,40 +336,40 @@ function Content() {
               </Link>
               <Carousel>
                 <Box>
-                  <Image src="driver-1.jpeg" />
+                  <Image src="driver-1.jpeg" alt="Instalare Driver Clona Arduino Pasul 1"/>
                   <Text className="legend">
                     Apasam click pe textul albastru unde scrie Windows CH340
                     Driver
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-2.jpeg" />
+                  <Image src="driver-2.jpeg" alt="Instalare Driver Clona Arduino Pasul 2"/>
                   <Text className="legend">Apasam click pe Extract to</Text>
                 </Box>
                 <Box>
-                  <Image src="driver-3.jpeg" />
+                  <Image src="driver-3.jpeg" alt="Instalare Driver Clona Arduino Pasul 3"/>
                   <Text className="legend">
                     Apasam pe ok si mergem in folderul de downloads
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-4.jpeg" />
+                  <Image src="driver-4.jpeg" alt="Instalare Driver Clona Arduino Pasul 4"/>
                   <Text className="legend">
                     Intram in folderul care a fost extras din fisier
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-5.jpeg" />
+                  <Image src="driver-5.jpeg" alt="Instalare Driver Clona Arduino Pasul 5"/>
                   <Text className="legend">
                     Apasam dublu click pe aplicatie
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-6.jpeg" />
+                  <Image src="driver-6.jpeg" alt="Instalare Driver Clona Arduino Pasul 6"/>
                   <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
                 <Box>
-                  <Image src="driver-7.jpeg" />
+                  <Image src="driver-7.jpeg" alt="Instalare Driver Clona Arduino Pasul 7"/>
                   <Text className="legend">
                     Apasam pe OK si iesim din aplicatie apasand butonul X
                   </Text>
