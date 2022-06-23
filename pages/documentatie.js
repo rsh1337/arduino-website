@@ -36,6 +36,7 @@ function Content() {
         width="100%"
         bg="white"
         top="65px"
+        zIndex="dropdown"
       >
         <AccordionItem>
           <AccordionButton>

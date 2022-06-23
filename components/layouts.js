@@ -92,17 +92,17 @@ function Navbar() {
                   Documentatie
                 </Button>
               </NextLink>
-              <NextLink href="/" passHref>
+              <NextLink href="#" passHref>
                 <Button variant="ghost" w="100%">
                   Senzori
                 </Button>
               </NextLink>
-              <NextLink href="/" passHref>
+              <NextLink href="#" passHref>
                 <Button variant="ghost" w="100%">
                   Proiecte
                 </Button>
               </NextLink>
-              <NextLink href="/" passHref>
+              <NextLink href="#" passHref>
                 <Button variant="ghost" w="100%">
                   Lectii
                 </Button>
