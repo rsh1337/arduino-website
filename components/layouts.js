@@ -29,8 +29,8 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <Flex direction="column" position="sticky" top="0px" bg="white">
-    <Box mt={3} >
+    <Flex direction="column" position="sticky" top="0px" bg="white" zIndex="dropdown">
+    <Box mt={3}>
       <Container maxW={{ base: "container.xl" }}>
         <Stack spacing={4} direction="row">
           <Heading>Arduino</Heading>
