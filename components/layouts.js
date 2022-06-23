@@ -1,13 +1,12 @@
 import { Button, IconButton } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Center,
   Container,
   Grid,
   Heading,
-  Link,
   Spacer,
   Stack,
   VStack,
@@ -15,29 +14,23 @@ import {
   Divider,
 } from "@chakra-ui/layout";
 import {
-  DarkMode,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  LightMode,
-  Tooltip,
-  useColorMode,
 } from "@chakra-ui/react";
-import { ScaleFade } from "@chakra-ui/transition";
 import Head from "next/head";
 import NextLink from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box mt={3}>
+    <Flex direction="column" position="sticky" top="0px" bg="white">
+    <Box mt={3} >
       <Container maxW={{ base: "container.xl" }}>
         <Stack spacing={4} direction="row">
           <Heading>Arduino</Heading>
@@ -48,7 +41,7 @@ function Navbar() {
             display={{ base: "none", md: "flex" }}
           >
             <Center>
-              <NextLink href="/despre-arduino" passHref>
+              <NextLink href="/documentatie" passHref>
                 <Button variant="ghost">Documentatie</Button>
               </NextLink>
             </Center>
@@ -69,15 +62,6 @@ function Navbar() {
             </Center>
           </Stack>
           <Spacer />
-          <Tooltip label="Beta Feature!" aria-label="A tooltip">
-              <IconButton
-                aria-label={colorMode}
-                size="lg"
-                mr={2}
-                icon={<MoonIcon />}
-                onClick={() => toggleColorMode()}
-              />
-          </Tooltip>
           <IconButton
             aria-label="Open Menu"
             size="lg"
@@ -103,28 +87,23 @@ function Navbar() {
 
           <DrawerBody>
             <VStack spacing={4} mt={5}>
-              <NextLink href="/despre-arduino" passHref>
-                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
-                  Despre Arduino
+              <NextLink href="/documentatie" passHref>
+                <Button variant="ghost" w="100%">
+                  Documentatie
                 </Button>
               </NextLink>
               <NextLink href="/" passHref>
-                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
-                  Instalare
-                </Button>
-              </NextLink>
-              <NextLink href="/" passHref>
-                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                <Button variant="ghost" w="100%">
                   Senzori
                 </Button>
               </NextLink>
               <NextLink href="/" passHref>
-                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                <Button variant="ghost" w="100%">
                   Proiecte
                 </Button>
               </NextLink>
               <NextLink href="/" passHref>
-                <Button variant="ghost" w="100%" _hover={{ bg: "#88a2bc" }}>
+                <Button variant="ghost" w="100%">
                   Lectii
                 </Button>
               </NextLink>
@@ -133,6 +112,8 @@ function Navbar() {
         </DrawerContent>
       </Drawer>
     </Box>
+    <Divider mt="0.75rem"/>
+    </Flex>
   );
 }
 
@@ -145,7 +126,6 @@ export default function Layout({ title, children }) {
       <Grid minH="100vh">
         <VStack align="stretch" w="full" spacing={3}>
           <Navbar />
-          <Divider />
           <Box as="main" h="full">
             {children}
           </Box>

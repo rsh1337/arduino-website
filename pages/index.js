@@ -42,7 +42,7 @@ function Content() {
             ornare aenean.
           </Text>
         </Center>
-        <NextLink href="/despre-arduino" passHref>
+        <NextLink href="/documentatie" passHref>
           <Center mt={10}>
             <Button colorScheme="green">Incepe acum</Button>
           </Center>
