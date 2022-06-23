@@ -9,14 +9,8 @@ import {
   Divider,
   Flex,
   Heading,
-  HStack,
   Image,
   Link,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -383,9 +377,9 @@ function Content() {
   );
 }
 
-export default function DespreArduino() {
+export default function Documentatie() {
   return (
-    <Layout title="Despre">
+    <Layout title="Documentatie">
       <Content />
     </Layout>
   );
