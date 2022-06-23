@@ -268,49 +268,49 @@ function Content() {
                 <Box>
                   <Image src="ide-3.jpeg" />
                   <Text className="legend">
-                    Apasam pe butonul unde scrie "JUST DOWNLOAD" si dechidem
+                    Apasam pe butonul unde scrie JUST DOWNLOAD si dechidem
                     aplicatia
                   </Text>
                 </Box>
                 <Box>
                   <Image src="ide-4.jpeg" />
                   <Text className="legend">
-                    Acceptam termenii si conditiile apasand pe butonul "I Agree"
+                    Acceptam termenii si conditiile apasand pe butonul I Agree
                   </Text>
                 </Box>
                 <Box>
                   <Image src="ide-5.jpeg" />
-                  <Text className="legend">Apasam pe butonul "Next"</Text>
+                  <Text className="legend">Apasam pe butonul Next</Text>
                 </Box>
                 <Box>
                   <Image src="ide-6.jpeg" />
-                  <Text className="legend">Apasam pe butonul "Install"</Text>
+                  <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
                 <Box>
                   <Image src="ide-7.jpeg" />
                   <Text className="legend">
-                    Apasam pe butonul "Install" pentru a instala driverele
+                    Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
                   <Image src="ide-8.jpeg" />
                   <Text className="legend">
-                    Apasam pe butonul "Install" pentru a instala driverele
+                    Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
                   <Image src="ide-9.jpeg" />
                   <Text className="legend">
-                    Apasam pe butonul "Install" pentru a instala driverele
+                    Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
                   <Image src="ide-10.jpeg" />
                   <Text className="legend">
-                    Apasam pe butonul "close" si o sa gasim aplicatia pe desktop
+                    Apasam pe butonul close si o sa gasim aplicatia pe desktop
                   </Text>
                 </Box>
               </Carousel>
@@ -338,13 +338,13 @@ function Content() {
                 <Box>
                   <Image src="driver-1.jpeg" />
                   <Text className="legend">
-                    Apasam click pe textul albastru unde scrie "Windows CH340
-                    Driver"
+                    Apasam click pe textul albastru unde scrie Windows CH340
+                    Driver
                   </Text>
                 </Box>
                 <Box>
                   <Image src="driver-2.jpeg" />
-                  <Text className="legend">Apasam click pe "Extract to"</Text>
+                  <Text className="legend">Apasam click pe Extract to</Text>
                 </Box>
                 <Box>
                   <Image src="driver-3.jpeg" />
@@ -366,12 +366,12 @@ function Content() {
                 </Box>
                 <Box>
                   <Image src="driver-6.jpeg" />
-                  <Text className="legend">Apasam pe butonul "Install"</Text>
+                  <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
                 <Box>
                   <Image src="driver-7.jpeg" />
                   <Text className="legend">
-                    Apasam pe "OK" si iesim din aplicatie apasand butonul "X"
+                    Apasam pe OK si iesim din aplicatie apasand butonul X
                   </Text>
                 </Box>
               </Carousel>
