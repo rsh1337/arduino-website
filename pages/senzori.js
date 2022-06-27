@@ -126,7 +126,7 @@ function Content() {
         {data.senzori.map((senzor) => (
           <Box>
             <Card
-              id={senzor._id}
+              id={senzor.id}
               imagine={senzor.imagine1}
               nume={senzor.nume}
               descriere={senzor.descrieremini}
