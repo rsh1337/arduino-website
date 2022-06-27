@@ -27,12 +27,12 @@ import useSWR from "swr";
 import Layout from "../components/layouts";
 import { fetcher } from "../lib/fetcher";
 
-function Card({ id, imagine, nume, descriere }) {
+function Card({imagine, nume, descriere }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
 
   return (
-    <Box borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden" key={id}>
+    <Box borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden">
       <Image src={imagine} alt={nume} />
 
       <Box p="6">
@@ -124,9 +124,8 @@ function Content() {
       <Center>
       <SimpleGrid columns={{base: "1", md: "2", lg: "3"}} spacing={3}>
         {data.senzori.map((senzor) => (
-          <Box>
+          <Box key={senzor._id}>
             <Card
-              id={senzor.id}
               imagine={senzor.imagine1}
               nume={senzor.nume}
               descriere={senzor.descrieremini}
