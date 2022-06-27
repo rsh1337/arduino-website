@@ -117,7 +117,7 @@ function Content() {
 
 export default function Home() {
   return (
-      <Layout title="Home">
+      <Layout title="Arduino :: Home">
         <Content />
       </Layout>
   );

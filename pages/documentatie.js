@@ -379,7 +379,7 @@ function Content() {
 
 export default function Documentatie() {
   return (
-    <Layout title="Documentatie">
+    <Layout title="Arduino :: Documentatie">
       <Content />
     </Layout>
   );
