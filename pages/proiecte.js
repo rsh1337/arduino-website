@@ -5,8 +5,6 @@ import {
   CircularProgress,
   SimpleGrid,
   Skeleton,
-  SkeletonCircle,
-  SkeletonText,
 } from "@chakra-ui/react";
 import React from "react";
 import useSWR from "swr";
@@ -15,11 +13,11 @@ import Layout from "../components/layouts";
 import { fetcher } from "../lib/fetcher";
 
 function Content() {
-  const { data, error } = useSWR("/api/senzori", fetcher);
+  const { data, error } = useSWR("/api/proiecte", fetcher);
   if (error) return <div>Failed to load</div>;
   if (!data) {
     return (
-      <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
+        <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
         <Center>
           <SimpleGrid columns={{ base: "1", md: "2", lg: "3" }} spacing={3}>
             <Skeleton height='20rem' width="24rem" />
@@ -41,12 +39,12 @@ function Content() {
     <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
       <Center>
         <SimpleGrid columns={{ base: "1", md: "2", lg: "3" }} spacing={3}>
-          {data.senzori.map((senzor) => (
-            <Box key={senzor._id}>
+          {data.proiecte.map((proiect) => (
+            <Box key={proiect._id}>
               <Card
-                imagine={senzor.imagine1}
-                nume={senzor.nume}
-                descriere={senzor.descrieremini}
+                imagine={proiect.imagine1}
+                nume={proiect.nume}
+                descriere={proiect.descrieremini}
               />
             </Box>
           ))}
@@ -58,7 +56,7 @@ function Content() {
 
 export default function Index() {
   return (
-    <Layout title="Arduino :: Senzori">
+    <Layout title="Arduino :: Proiecte">
       <Content />
     </Layout>
   );

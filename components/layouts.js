@@ -61,12 +61,12 @@ function Navbar() {
                 </NextLink>
               </Center>
               <Center>
-                <NextLink href="#" passHref>
+                <NextLink href="/proiecte" passHref>
                   <Button variant="ghost">Proiecte</Button>
                 </NextLink>
               </Center>
               <Center>
-                <NextLink href="#" passHref>
+                <NextLink href="/lectii" passHref>
                   <Button variant="ghost">Lectii</Button>
                 </NextLink>
               </Center>
@@ -107,12 +107,12 @@ function Navbar() {
                     Senzori
                   </Button>
                 </NextLink>
-                <NextLink href="#" passHref>
+                <NextLink href="/proiecte" passHref>
                   <Button variant="outline" w="100%">
                     Proiecte
                   </Button>
                 </NextLink>
-                <NextLink href="#" passHref>
+                <NextLink href="/lectii" passHref>
                   <Button variant="outline" w="100%">
                     Lectii
                   </Button>
