@@ -157,7 +157,7 @@ function Content() {
         <Flex>
           <Box flex="1" display={{ base: "none", lg: "flex" }}></Box>
           <Divider
-            height="302rem"
+            height="419rem"
             orientation="vertical"
             display={{ base: "none", lg: "flex" }}
             ml={2}
@@ -248,7 +248,7 @@ function Content() {
               <Link href="https://www.arduino.cc/en/software" isExternal>
                 Link catre site-ul Arduino <ExternalLinkIcon mx="2px" />
               </Link>
-              <Carousel>
+              <Carousel showThumbs={false}>
                 <Box>
                   <Image src="ide-1.jpeg" alt="Instalare IDE Pasul 1"/>
                   <Text className="legend">Apasam pe butonul SOFTWARE</Text>
@@ -328,7 +328,7 @@ function Content() {
               <Link href="/driver/Driver_Arduino_Fake.zip" isExternal>
                 Link Descarcare Driver <ExternalLinkIcon mx="2px" />
               </Link>
-              <Carousel>
+              <Carousel showThumbs={false}>
                 <Box>
                   <Image src="driver-1.jpeg" alt="Instalare Driver Clona Arduino Pasul 1"/>
                   <Text className="legend">

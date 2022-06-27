@@ -56,7 +56,7 @@ function Navbar() {
                 </NextLink>
               </Center>
               <Center>
-                <NextLink href="#" passHref>
+                <NextLink href="/senzori" passHref>
                   <Button variant="ghost">Senzori</Button>
                 </NextLink>
               </Center>
@@ -102,7 +102,7 @@ function Navbar() {
                     Documentatie
                   </Button>
                 </NextLink>
-                <NextLink href="#" passHref>
+                <NextLink href="/senzori" passHref>
                   <Button variant="outline" w="100%">
                     Senzori
                   </Button>
@@ -131,7 +131,7 @@ export default function Layout({ title, children }) {
   return (
     <>
       <Head>
-        <title>Arduino :: {title}</title>
+        <title>{title}</title>
       </Head>
       <Grid minH="100vh">
         <VStack align="stretch" w="full" spacing={3}>
