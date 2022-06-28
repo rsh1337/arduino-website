@@ -20,8 +20,9 @@ import {
     AlertDialogOverlay,
   } from "@chakra-ui/react";
   import React from "react";
+  import NextLink from "next/link"
 
-export default function Card({ imagine, nume, descriere }) {
+export default function Card({ imagine, nume, descriere, hlink }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
 
@@ -93,9 +94,11 @@ export default function Card({ imagine, nume, descriere }) {
               Mini Descriere
             </Button>
 
+            <NextLink href={`/${hlink}`} passHref>
             <Button colorScheme="blue" size="sm" mt={4}>
               Deschide Pagina
             </Button>
+            </NextLink>
           </ButtonGroup>
         </Center>
       </Box>

@@ -1,11 +1,4 @@
-import {
-  Box,
-  Center,
-  Container,
-  CircularProgress,
-  SimpleGrid,
-  Skeleton,
-} from "@chakra-ui/react";
+import { Box, Center, Container, SimpleGrid, Skeleton } from "@chakra-ui/react";
 import React from "react";
 import useSWR from "swr";
 import Card from "../components/Card";
@@ -13,23 +6,23 @@ import Layout from "../components/layouts";
 import { fetcher } from "../lib/fetcher";
 
 function Content() {
-  const { data, error } = useSWR("/api/proiecte", fetcher);
+  const { data, error } = useSWR("/api/proiecte/proiecte", fetcher);
   if (error) return <div>Failed to load</div>;
   if (!data) {
     return (
-        <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
+      <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
         <Center>
           <SimpleGrid columns={{ base: "1", md: "2", lg: "3" }} spacing={3}>
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
-            <Skeleton height='20rem' width="24rem" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
+            <Skeleton height="20rem" width="24rem" borderRadius="lg" />
           </SimpleGrid>
         </Center>
       </Container>
@@ -45,6 +38,7 @@ function Content() {
                 imagine={proiect.imagine1}
                 nume={proiect.nume}
                 descriere={proiect.descrieremini}
+                hlink={`proiecte/${proiect._id}`}
               />
             </Box>
           ))}
