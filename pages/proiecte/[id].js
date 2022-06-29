@@ -30,8 +30,8 @@ export default function Index({ proiect }) {
               return (
                 <Carousel showThumbs={false}>
                   {proiect.imagini.map((data, index) => (
-                    <Box>
-                      <AspectRatio key={index} ratio={16 / 9} maxW="100%">
+                    <Box key={index}>
+                      <AspectRatio ratio={16 / 9} maxW="100%">
                         <Image src={data} />
                       </AspectRatio>
                     </Box>
@@ -46,7 +46,7 @@ export default function Index({ proiect }) {
               return (
                 <Carousel>
                   {proiect.imagini.map((data, index) => (
-                    <Box>
+                    <Box key={index}>
                       <AspectRatio ratio={16 / 9} maxW="100%">
                         <Image src={data} />
                       </AspectRatio>
