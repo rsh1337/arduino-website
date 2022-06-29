@@ -59,7 +59,7 @@ function Content() {
       <Center>
         <SimpleGrid columns={{ base: "1", md: "2", lg: "3" }} spacing={3}>
           {data.lectii.map((lectie) => (
-            <Box borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden">
+            <Box key={lectie._id} borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden">
               <Image src={lectie.imagine} alt={lectie.nume} />
 
               <Box p="6">
