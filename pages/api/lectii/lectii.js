@@ -1,5 +1,5 @@
-import dbConnect from '../../lib/dbConnect'
-import Lectii from '../../models/Lectii'
+import dbConnect from '../../../lib/dbConnect'
+import Lectii from '../../../models/Lectii'
 
 export default async function handler (req, res) {
     const { method } = req

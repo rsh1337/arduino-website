@@ -17,17 +17,11 @@ const ProiecteSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    video: {
-        type: String
-    },
-    imagine1: {
-        type: String,
+    imagini: {
+        type: Array,
         required: true
     },
-    imagine2: {
-        type: String
-    },
-    imagine3: {
+    video: {
         type: String
     },
     cod_folosit: {

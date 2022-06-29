@@ -12,8 +12,8 @@ import {
 import Layout from "../../components/layouts";
 import dbConnect from "../../lib/dbConnect";
 import Proiecte from "../../models/Proiecte";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Index({ proiect }) {
   return (
@@ -24,54 +24,62 @@ export default function Index({ proiect }) {
           <Text fontSize="xl" whiteSpace="pre-line">
             {proiect.descriere}
           </Text>
+
           {(() => {
-            if (!proiect.imagine2 && !proiect.video && !proiect.imagine3) {
-              return <Image src={proiect.imagine1} />;
+            if (!proiect.video) {
+              return (
+                <Carousel showThumbs={false}>
+                  {proiect.imagini.map((data, index) => (
+                    <Box>
+                      <AspectRatio key={index} ratio={16 / 9} maxW="100%">
+                        <Image src={data} />
+                      </AspectRatio>
+                    </Box>
+                  ))}
+                </Carousel>
+              );
             }
           })()}
-          <Swiper navigation>
-            <SwiperSlide>
-              <Box>
-                <AspectRatio ratio={16 / 9} maxW="100%">
-                  <Image src={proiect.imagine1} />
-                </AspectRatio>
-              </Box>
-            </SwiperSlide>
-            <Box display="none">
-              <SwiperSlide display="none">
-                <Box>
-                  <AspectRatio ratio={16 / 9} maxW="100%">
-                    <Image src={proiect.imagine2} />
-                  </AspectRatio>
-                </Box>
-              </SwiperSlide>
-            </Box>
-            <SwiperSlide>
-              <Box>
-                <AspectRatio ratio={16 / 9} maxW="100%">
-                  <Image src={proiect.imagine3} />
-                </AspectRatio>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box>
-                <AspectRatio ratio={16 / 9} maxW="100%">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    muted={true}
-                    src={proiect.video}
-                  />
-                </AspectRatio>
-              </Box>
-            </SwiperSlide>
-          </Swiper>
+
+          {(() => {
+            if (proiect.video) {
+              return (
+                <Carousel>
+                  {proiect.imagini.map((data, index) => (
+                    <Box>
+                      <AspectRatio ratio={16 / 9} maxW="100%">
+                        <Image src={data} />
+                      </AspectRatio>
+                    </Box>
+                  ))}
+                  <Box>
+                    <AspectRatio ratio={16 / 9} maxW="100%">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        muted={true}
+                        src={proiect.video}
+                      />
+                    </AspectRatio>
+                  </Box>
+                </Carousel>
+              );
+            }
+          })()}
           <Heading>Utilizare</Heading>
           <Text fontSize="xl" whiteSpace="pre-line">
             {proiect.utilizare}
           </Text>
-          <Heading>Cod Utilizat</Heading>
-          <Code whiteSpace="pre-line">{proiect.cod_folosit}</Code>
+          {(() => {
+            if (proiect.cod_folosit) {
+              return (
+                <>
+                  <Heading>Cod Utilizat</Heading>
+                  <Code whiteSpace="pre-line">{proiect.cod_folosit}</Code>
+                </>
+              );
+            }
+          })()}
         </Stack>
       </Container>
     </Layout>
