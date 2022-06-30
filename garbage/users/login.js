@@ -1,13 +1,11 @@
-import dbConnect from "../../../lib/dbConnect";
-import User from "../../../models/User";
+import dbConnect from "../../lib/dbConnect";
+import User from "../../models/User";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import auth from "../../../middleware/auth";
 
 export default async function handler(req, res) {
   const { method } = req;
   const { email, password } = req.body;
-  const saltRounds = 10;
 
   await dbConnect();
 

@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 
-export default async function handler(req, res, next) {
+module.exports = function(req, res, next) {
   const token = req.header("token");
   if (!token) return res.status(401).json({ message: "Auth Error" });
 
