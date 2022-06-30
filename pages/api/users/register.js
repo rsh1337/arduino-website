@@ -1,6 +1,9 @@
 import dbConnect from '../../../lib/dbConnect'
 import User from '../../../models/User'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
+import auth from "../../../middleware/auth"
+
 export default async function handler (req, res) {
     const { method } = req
     const { name, email, password } = req.body;
@@ -11,8 +14,6 @@ export default async function handler (req, res) {
     switch (method) {
       case 'POST':
         try {
-            const salt = bcrypt.genSaltSync(saltRounds);
-            const passwordhash = bcrypt.hashSync(password, salt);
             var userEmailCheck = await User.findOne({email});
             if (userEmailCheck) {
                 return res.status(400).json({
@@ -22,11 +23,31 @@ export default async function handler (req, res) {
             var user = new User({
               name,
               email,
-              password: passwordhash,
+              password,
             });
-            const usercreateaccount = await user.save();
+            const salt = bcrypt.genSaltSync(saltRounds);
+            user.password = await bcrypt.hashSync(password, salt);
             
-            return res.status(200).send(usercreateaccount);
+            const useraccountcreated = await user.save();
+
+            const payload = {
+              user: {
+                id: user.id
+              }
+            };
+            jwt.sign(
+              payload,
+              "randomString",
+              {
+                expiresIn: 10000
+              },
+              (err, token) => {
+                if (err) throw err;
+                return res.status(200).json({
+                  token, useraccountcreated
+                });
+              }
+            );
           } catch (error) {
             return res.status(500).send(error.message);
           }
