@@ -25,6 +25,7 @@ export default function Index() {
   const { data: session, status } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [nume, setNume] = useState("");
   const [message, setMessage] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,30 +43,11 @@ export default function Index() {
     }
     // return Router.push("/");
   };
-  // const registerUser = async (email, password, e) => {
-  //   e.preventDefault();
-  //   const res = await fetch("/api/register", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ email, password }),
-  //   });
-  //   let data = await res.json();
-  //   if (data.message) {
-  //     setMessage(data.name);
-  //   }
-  //   if (data.message == "success") {
-  //     let options = { redirect: false, email, password };
-  //     await signIn("credentials", options);
-  //     // return Router.push("/");
-  //   }
-  // };
 
   if (status === "unauthenticated") {
     return (
       <Layout title="Arduino :: Dashboard">
-        <Center h="60%">
+        <Center >
           <Container maxW={{ base: "container.sm" }} mt={10} mb={10}>
             <FormControl>
               <form onSubmit={handleSubmit}>
@@ -89,18 +71,9 @@ export default function Index() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <FormHelperText>Parolele sunt 100% criptate.</FormHelperText>
                 <Button mt={6} colorScheme="teal" type="submit">
                   Conecteaza-te
                 </Button>
-
-                {/* <Button
-                  mt={6}
-                  colorScheme="teal"
-                  onClick={(e) => registerUser(email, password, e)}
-                >
-                  Inregistreaza-te
-                </Button> */}
               </form>
             </FormControl>
           </Container>
@@ -116,7 +89,7 @@ export default function Index() {
           <Center mb={10}>
             <Heading>Admin Page</Heading>
           </Center>
-          <Tabs isFitted variant='soft-rounded'>
+          <Tabs isFitted variant="soft-rounded">
             <TabList mb="1em">
               <Tab>Create senzor</Tab>
               <Tab>Create Proiect</Tab>
@@ -139,9 +112,9 @@ export default function Index() {
             </TabPanels>
           </Tabs>
           <Center>
-          <Button mt={6} colorScheme="teal" onClick={() => signOut()}>
-            SignOut
-          </Button>
+            <Button mt={6} colorScheme="teal" onClick={() => signOut()}>
+              SignOut
+            </Button>
           </Center>
         </Container>
       </Layout>

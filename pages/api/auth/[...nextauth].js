@@ -5,6 +5,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 // import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
 import User from "../../../models/User";
+import dbConnect from "../../../lib/dbConnect";
 
 export default NextAuth({
   // adapter: MongoDBAdapter(clientPromise),
@@ -19,6 +20,7 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
+        await dbConnect();
         const email = credentials.email;
         const password = credentials.password;
         const user = await User.findOne({ email });

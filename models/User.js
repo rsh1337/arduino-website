@@ -1,10 +1,15 @@
 import mongoose from 'mongoose'
 
 const User = new mongoose.Schema({
-    name: {
-      type: String
-    },
+  nume:{
+    type: String,
+    required: true
+  },
     email: {
+      type: String,
+      required: true
+    },
+    invitation: {
       type: String,
       required: true
     },
@@ -27,6 +32,9 @@ const User = new mongoose.Schema({
       type: Date,
       default: Date.now
     },
+    session:{
+      type: String
+    }
   });  
 
 module.exports = mongoose.models.User || mongoose.model('User', User)
