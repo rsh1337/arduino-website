@@ -139,7 +139,7 @@ export default function Index() {
             </TabPanels>
           </Tabs>
           <Center>
-          <Button mt={6} colorScheme="teal" onClick={() => signOut()} mt={150}>
+          <Button mt={6} colorScheme="teal" onClick={() => signOut()}>
             SignOut
           </Button>
           </Center>
