@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
+import Admin from "../../models/Admin";
 import Invitation from "../../models/Invitation";
 export default async function handler(req, res) {
   const { method } = req;
@@ -12,37 +12,43 @@ export default async function handler(req, res) {
   switch (method) {
     case "POST":
       try {
-        var userEmailCheck = await User.findOne({ email });
+        var userEmailCheck = await Admin.findOne({ email });
         if (userEmailCheck) {
           console.log("Email Already Exists");
           return res.status(400).json({
-            message: "Email Already Exists",
+            message: "Emailul exista deja",
           });
         }
-        var invitationDuplicateCheck = await User.findOne({ invitation });
+        var invitationDuplicateCheck = await Admin.findOne({ invitation });
         if (invitationDuplicateCheck) {
           console.log("Invitation already used");
           return res.status(400).json({
-            message: "Invitation already used",
+            message: "Invitatia a fost folosita.",
           });
         }
         var invitationExistCheck = await Invitation.findOne({ invitation });
         if (!invitationExistCheck) {
           console.log("Invitation Dosent Exist");
           return res.status(400).json({
-            message: "Invitation Dosent Exist",
+            message: "Invitatie invalida.",
           });
         }
-        var user = new User({
+        var admin = new Admin({
           email,
           password,
           nume,
           invitation
         });
+        if (!admin.password){
+          console.log("No Password")
+          return res.status(400).json({
+            message: "Scrie o parola.",
+          });
+        }
         const salt = bcrypt.genSaltSync(saltRounds);
-        user.password = await bcrypt.hashSync(password, salt);
+        admin.password = await bcrypt.hashSync(password, salt);
 
-        await user.save();
+        await admin.save();
         return res.status(200).json({ msgsg: 'success' });
       } catch (error) {
         return res.status(500).send(error);

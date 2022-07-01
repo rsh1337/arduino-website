@@ -4,13 +4,16 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 // import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
-import User from "../../../models/User";
+import Admin from "../../../models/Admin";
 import dbConnect from "../../../lib/dbConnect";
 
 export default NextAuth({
   // adapter: MongoDBAdapter(clientPromise),
   session: {
     jwt: true,
+  },
+  pages: {
+    signIn: "/admin",
   },
   providers: [
     CredentialsProvider({
@@ -23,27 +26,23 @@ export default NextAuth({
         await dbConnect();
         const email = credentials.email;
         const password = credentials.password;
-        const user = await User.findOne({ email });
-        const signinUser = async ({ password, user }) => {
-          if (!user.password) {
-            throw new Error("Please enter password");
+        const admin = await Admin.findOne({ email });
+        const signinUser = async ({ password, admin }) => {
+          if (!admin.password) {
+            throw new Error("Scrie o parola");
           }
-          const isMatch = await bcrypt.compare(password, user.password);
+          const isMatch = await bcrypt.compare(password, admin.password);
           if (!isMatch) {
-            throw new Error("Password Incorrect.");
+            throw new Error("Parola incorecta.");
           }
-          return user;
+          return admin;
         };
 
-        if (!user) {
-          throw new Error("You haven't registered yet");
+        if (!admin) {
+          throw new Error("Acest cont nu este inregistrat.");
         }
-        if (user) return signinUser({ password, user });
+        if (admin) return signinUser({ password, admin });
       },
     }),
-    // GoogleProvider({
-    //     clientId: process.env.GOOGLE_ID,
-    //     clientSecret: process.env.GOOGLE_SECRET,
-    //   }),
   ],
 });
