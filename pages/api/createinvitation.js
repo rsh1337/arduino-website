@@ -1,7 +1,7 @@
 
-import Proiecte from "../../../models/Proiecte";
+import Invitation from "../../models/Invitation";
 import { getSession } from "next-auth/react";
-import dbConnect from "../../../lib/dbConnect";
+import dbConnect from "../../lib/dbConnect";
 
 export default async (req, res) => {
   const { method } = req;
@@ -11,8 +11,8 @@ export default async (req, res) => {
     switch (method) {
       case "POST":
         try {
-          const proiecte = await Proiecte.create(req.body);
-          res.status(201).json({ success: true, data: proiecte });
+          const invitatie = await Invitation.create(req.body);
+          res.status(201).json({ success: true, data: invitatie });
         } catch (error) {
           res.status(400).json({ success: false });
         }

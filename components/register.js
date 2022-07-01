@@ -1,4 +1,5 @@
 import { Button, Center, Container, FormControl, FormHelperText, FormLabel, Input, useToast } from "@chakra-ui/react";
+import { Router } from "next/router";
 import { useState } from "react";
 
 export default function Registerfunction() {
