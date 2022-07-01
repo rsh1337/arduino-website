@@ -13,9 +13,11 @@ export default async function handler(req, res) {
         try {
             var userEmailCheck = await User.findOne({email});
             if (userEmailCheck) {
+                console.log("Email Already Exists")
                 return res.status(400).json({
-                    msg: "Email Already Exists"
+                    message: "Email Already Exists"
                 });
+                
             }
             var user = new User({
               name,

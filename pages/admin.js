@@ -1,4 +1,4 @@
-import { signIn, useSession, getSession } from "next-auth/react";
+import { signIn, useSession, getSession, signOut } from "next-auth/react";
 import Router from "next/router";
 import {
   Box,
@@ -10,12 +10,19 @@ import {
   FormLabel,
   Heading,
   Input,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import Layout from "../components/layouts";
 
 export default function Index() {
-  const { data: session, status } = useSession()
+  const toast = useToast();
+  const { data: session, status } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);
@@ -25,39 +32,43 @@ export default function Index() {
     const res = await signIn("credentials", options);
     setMessage(null);
     if (res?.error) {
-      setMessage(res.error);
-      console.log("error", res.error);
+      return toast({
+        title: "Error",
+        description: res.error,
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
     }
     // return Router.push("/");
   };
-  const registerUser = async (email, password, e) => {
-    e.preventDefault();
-    const res = await fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
-    let data = await res.json();
-    if (data.message) {
-      setMessage(data.name);
-    }
-    if (data.message == "success") {
-      let options = { redirect: false, email, password };
-      const res = await signIn("credentials", options);
-      // return Router.push("/");
-    }
-  };
+  // const registerUser = async (email, password, e) => {
+  //   e.preventDefault();
+  //   const res = await fetch("/api/register", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ email, password }),
+  //   });
+  //   let data = await res.json();
+  //   if (data.message) {
+  //     setMessage(data.name);
+  //   }
+  //   if (data.message == "success") {
+  //     let options = { redirect: false, email, password };
+  //     await signIn("credentials", options);
+  //     // return Router.push("/");
+  //   }
+  // };
+
   if (status === "unauthenticated") {
     return (
       <Layout title="Arduino :: Dashboard">
         <Center h="60%">
           <Container maxW={{ base: "container.sm" }} mt={10} mb={10}>
-            <FormControl onSubmit={handleSubmit}>
+            <FormControl>
               <form onSubmit={handleSubmit}>
-                <FormLabel htmlFor="name">Name</FormLabel>
-                <Input id="name" type="name" name="name" />
                 <FormLabel htmlFor="email" mt={10}>
                   Email address
                 </FormLabel>
@@ -82,14 +93,14 @@ export default function Index() {
                 <Button mt={6} colorScheme="teal" type="submit">
                   Conecteaza-te
                 </Button>
-  
-                <Button
+
+                {/* <Button
                   mt={6}
                   colorScheme="teal"
                   onClick={(e) => registerUser(email, password, e)}
                 >
                   Inregistreaza-te
-                </Button>
+                </Button> */}
               </form>
             </FormControl>
           </Container>
@@ -98,10 +109,42 @@ export default function Index() {
     );
   }
 
-  return (
-    <>
-      <h1>Protected Page</h1>
-      <p>You can view this page because you are signed in.</p>
-    </>
-  )
+  if (status === "authenticated") {
+    return (
+      <Layout title="Arduino :: Admin">
+        <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
+          <Center mb={10}>
+            <Heading>Admin Page</Heading>
+          </Center>
+          <Tabs isFitted variant='soft-rounded'>
+            <TabList mb="1em">
+              <Tab>Create senzor</Tab>
+              <Tab>Create Proiect</Tab>
+              <Tab>Create Lectie</Tab>
+              <Tab>Create Notification</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <p>one!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>two!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>one!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>two!</p>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+          <Center>
+          <Button mt={6} colorScheme="teal" onClick={() => signOut()} mt={150}>
+            SignOut
+          </Button>
+          </Center>
+        </Container>
+      </Layout>
+    );
+  }
 }
