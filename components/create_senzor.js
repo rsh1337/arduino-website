@@ -60,7 +60,7 @@ export default function CreateSenzor() {
         isClosable: true,
       });
     }
-    if (data.message == "success") {
+    if (data.messagee == "success") {
       return toast({
         title: "Senzor Creat.",
         description: "Senzorul a fost creat cu succes!",

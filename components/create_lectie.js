@@ -45,7 +45,7 @@ import {
           isClosable: true,
         });
       }
-      if (data.message == "success") {
+      if (data.messagee == "success") {
         return (
           toast({
             title: "Lectie Creata.",
