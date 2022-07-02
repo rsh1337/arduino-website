@@ -5,6 +5,10 @@ const Invitation = new mongoose.Schema({
     type: String,
     required: true,
   },
+  createdBy:{
+    type: String,
+    required: true,
+  },
   since: {
     type: Date,
     default: Date.now,

@@ -1,5 +1,5 @@
 import { Button, Center, Container, FormControl, FormHelperText, FormLabel, Input, useToast } from "@chakra-ui/react";
-import { Router } from "next/router";
+import Router from "next/router";
 import { useState } from "react";
 
 export default function Registerfunction() {
@@ -30,8 +30,8 @@ export default function Registerfunction() {
         });
       }
       if (data.msgsg == "success") {
+        Router.push("/admin");
         return (
-          Router.push("/admin"),
           toast({
             title: "Cont Creat.",
             description: "Contul tau a fost creat cu succes.",

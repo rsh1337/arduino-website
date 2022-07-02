@@ -12,7 +12,7 @@ export default async function handler (req, res) {
       case "POST":
         try {
           const senzor = await Senzori.create(req.body);
-          res.status(201).json({ success: true, data: senzor });
+          res.status(201).json({ message: "success", data: senzor });
         } catch (error) {
           res.status(400).json({ success: false });
         }

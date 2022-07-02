@@ -12,7 +12,7 @@ export default async function handler (req, res)  {
       case "POST":
         try {
           const lectie = await Lectii.create(req.body);
-          res.status(201).json({ success: true, data: lectie });
+          res.status(201).json({ message: "success", data: lectie });
         } catch (error) {
           res.status(400).json({ success: false });
         }

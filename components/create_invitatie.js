@@ -8,6 +8,7 @@ import {
   Input,
   useToast,
 } from "@chakra-ui/react";
+import { useSession } from "next-auth/react";
 import { useState } from "react";
 
 function makeid() {
@@ -23,10 +24,12 @@ function makeid() {
 
 export default function CreateInvitatie() {
   const toast = useToast();
+  const { data: session } = useSession();
   // Data
+  const [createdBy, setCreatedBy] = useState(session.user.email);
   const [invitation, setInvitation] = useState(makeid());
   //
-  const createInvitation = async (invitation, e) => {
+  const createInvitation = async (invitation,createdBy, e) => {
     e.preventDefault();
     const res = await fetch("/api/createinvitation", {
       method: "POST",
@@ -35,6 +38,7 @@ export default function CreateInvitatie() {
       },
       body: JSON.stringify({
         invitation,
+        createdBy
       }),
     });
     let data = await res.json();
@@ -48,7 +52,7 @@ export default function CreateInvitatie() {
         isClosable: true,
       });
     }
-    if (data.success == "true") {
+    if (data.msgsg == "success") {
       return toast({
         title: "Invitatie Creata.",
         description: "Invitatia a fost creata cu succes!",
@@ -77,7 +81,7 @@ export default function CreateInvitatie() {
           <Button
             mt={6}
             colorScheme="blue"
-            onClick={(e) => createInvitation(invitation, e)}
+            onClick={(e) => createInvitation(invitation,createdBy, e)}
           >
             Creaza Invitatie
           </Button>

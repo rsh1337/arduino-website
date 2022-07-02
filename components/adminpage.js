@@ -20,17 +20,7 @@ import CreateInvitatie from "./create_invitatie";
 import CreateLectie from "./create_lectie";
 import CreateProiecte from "./create_proiecte";
 import CreateSenzor from "./create_senzor";
-function generate() {
-  let length = document.getElementById("strlength").value;
-  const characters = 'abcdefghijklmnopqrstuvwxyz';
-  let result = ' ';
-  const charactersLength = characters.length;
-  for(let i = 0; i < length; i++) {
-      result += 
-      characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  document.getElementById("target").innerHTML = result
-}
+
 export default function Adminpage() {
   return (
       <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>

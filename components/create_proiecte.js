@@ -57,7 +57,7 @@ export default function CreateProiecte() {
         isClosable: true,
       });
     }
-    if (data.success == "true") {
+    if (data.message == "success") {
       return (
         toast({
           title: "Proiect Creat.",

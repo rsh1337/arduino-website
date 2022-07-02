@@ -12,7 +12,7 @@ export default async function handler (req, res)  {
       case "POST":
         try {
           const proiecte = await Proiecte.create(req.body);
-          res.status(201).json({ success: true, data: proiecte });
+          res.status(201).json({ message: "success", data: proiecte });
         } catch (error) {
           res.status(400).json({ success: false });
         }

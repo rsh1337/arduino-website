@@ -5,7 +5,7 @@ import dbConnect from "../../lib/dbConnect";
 
 export default async function handler (req, res) {
   const { method } = req;
-  const {invitation} = req.body
+  const {invitation, createdBy} = req.body
   const session = await getSession({ req });
   await dbConnect();
   if (session) {
@@ -19,8 +19,14 @@ export default async function handler (req, res) {
                 message: "Invitatia exista deja",
               });
             }
-          const invitatie = await Invitation.create(req.body);
-          res.status(201).json({ success: true, data: invitatie });
+            var invitatie = new Invitation({
+              invitation,
+              createdBy
+            })
+          // const invitatie = await Invitation.create(req.body);
+          await invitatie.save();
+          return res.status(201).json({ msgsg: 'success' });
+          // res.status(201).json({ success: true, data: invitatie });
         } catch (error) {
           res.status(400).json({ success: false });
         }
