@@ -67,7 +67,7 @@ function Navbar() {
               </Center>
               <Center>
                 <NextLink href="/lectii" passHref>
-                  <Button variant="ghost">Lectii</Button>
+                  <Button variant="ghost">Lectii/Teste</Button>
                 </NextLink>
               </Center>
             </Stack>
@@ -114,7 +114,7 @@ function Navbar() {
                 </NextLink>
                 <NextLink href="/lectii" passHref>
                   <Button variant="outline" w="100%">
-                    Lectii
+                    Lectii/Teste
                   </Button>
                 </NextLink>
               </VStack>

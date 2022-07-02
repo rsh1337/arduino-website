@@ -15,13 +15,11 @@ import {
     const [nume, setNume] = useState("");
     const [imagine, setImagine] = useState("");
     const [link, setLink] = useState("");
-    const [linkteste, setLinkteste] = useState("");
     //
     const createLectie = async (
       nume,
       imagine,
       link,
-      linkteste,
       e
     ) => {
       e.preventDefault();
@@ -33,8 +31,7 @@ import {
         body: JSON.stringify({
             nume,
             imagine,
-            link,
-            linkteste
+            link
         }),
       });
       let data = await res.json();
@@ -95,16 +92,6 @@ import {
               value={link}
               onChange={(e) => setLink(e.target.value)}
             />
-            <FormLabel htmlFor="linkteste" mt={10}>
-              Link Test
-            </FormLabel>
-            <Input
-              id="linkteste"
-              type="linkteste"
-              name="linkteste"
-              value={linkteste}
-              onChange={(e) => setLinkteste(e.target.value)}
-            />
             <Button
               mt={6}
               colorScheme="blue"
@@ -113,7 +100,6 @@ import {
                     nume,
                     imagine,
                     link,
-                    linkteste,
                     e
                 )
               }

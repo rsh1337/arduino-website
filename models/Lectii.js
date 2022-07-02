@@ -12,9 +12,6 @@ const LectiiSchema = new mongoose.Schema({
     link: {
         type: String
     },
-    linkteste: {
-        type: String
-    },
 })
 
 module.exports = mongoose.models.Lectii || mongoose.model('Lectii', LectiiSchema)

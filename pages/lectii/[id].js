@@ -43,7 +43,7 @@ export default function Index({ lectie }) {
           <Box>
             <AspectRatio ratio={16 / 9} maxW="100%">
               <iframe
-                src={lectie.linkteste}
+                src={lectie.link}
                 webkitallowfullscreen="true"
                 mozallowfullscreen="true"
               />
@@ -61,7 +61,7 @@ export default function Index({ lectie }) {
           <Box>
             <AspectRatio ratio={16 / 9} maxW="100%">
               <iframe
-                src={lectie.linkteste}
+                src={lectie.link}
                 webkitallowfullscreen="true"
                 mozallowfullscreen="true"
               />

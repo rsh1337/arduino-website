@@ -59,7 +59,13 @@ function Content() {
       <Center>
         <SimpleGrid columns={{ base: "1", md: "2", lg: "3" }} spacing={3}>
           {data.lectii.map((lectie) => (
-            <Box key={lectie._id} borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden">
+            <Box
+              key={lectie._id}
+              borderWidth={1}
+              borderRadius="lg"
+              maxW="sm"
+              overflow="hidden"
+            >
               <Image src={lectie.imagine} alt={lectie.nume} />
 
               <Box p="6">
@@ -74,28 +80,11 @@ function Content() {
                 </Box>
 
                 <Center>
-                  {(() => {
-                    if (!lectie.link == "") {
-                      return (
-                        <NextLink href={lectie.link}>
-                          <Button colorScheme="blue" size="sm" mt={4}>
-                            Deschide Pagina
-                          </Button>
-                        </NextLink>
-                      );
-                    }
-                  })()}
-                  {(() => {
-                    if (!lectie.linkteste == "") {
-                      return (
-                        <NextLink href={`lectii/${lectie._id}`}>
-                          <Button colorScheme="blue" size="sm" mt={4}>
-                            Deschide Pagina
-                          </Button>
-                        </NextLink>
-                      );
-                    }
-                  })()}
+                  <NextLink href={`lectii/${lectie._id}`}>
+                    <Button colorScheme="blue" size="sm" mt={4}>
+                      Deschide Pagina
+                    </Button>
+                  </NextLink>
                 </Center>
               </Box>
             </Box>

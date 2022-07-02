@@ -25,7 +25,7 @@ export default function Adminpage() {
           <TabList mb="1em">
             <Tab>Creaza Senzor</Tab>
             <Tab>Creaza Proiect</Tab>
-            <Tab>Creaza Lectie</Tab>
+            <Tab>Creaza Lectie/Test</Tab>
             <Tab>Creaza Invitatie</Tab>
           </TabList>
           <TabPanels>
