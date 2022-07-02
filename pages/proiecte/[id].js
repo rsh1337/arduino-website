@@ -58,7 +58,7 @@ export default function Index({ proiect }) {
                   {proiect.imagini.map((data, index) => (
                     <Box key={index}>
                       <AspectRatio ratio={16 / 9} maxW="100%">
-                        <Image src={data} />
+                        <Image src={data} alt={proiect.nume}/>
                       </AspectRatio>
                     </Box>
                   ))}
@@ -74,7 +74,7 @@ export default function Index({ proiect }) {
                   {proiect.imagini.map((data, index) => (
                     <Box key={index}>
                       <AspectRatio ratio={16 / 9} maxW="100%">
-                        <Image src={data} />
+                        <Image src={data} alt={proiect.nume}/>
                       </AspectRatio>
                     </Box>
                   ))}
@@ -85,6 +85,7 @@ export default function Index({ proiect }) {
                         height="100%"
                         muted={true}
                         src={proiect.video}
+                        alt={proiect.nume}
                       />
                     </AspectRatio>
                   </Box>
@@ -129,7 +130,7 @@ if (status === "authenticated") {
                   {proiect.imagini.map((data, index) => (
                     <Box key={index}>
                       <AspectRatio ratio={16 / 9} maxW="100%">
-                        <Image src={data} />
+                        <Image src={data} alt={proiect.nume}/>
                       </AspectRatio>
                     </Box>
                   ))}
@@ -145,7 +146,7 @@ if (status === "authenticated") {
                   {proiect.imagini.map((data, index) => (
                     <Box key={index}>
                       <AspectRatio ratio={16 / 9} maxW="100%">
-                        <Image src={data} />
+                        <Image src={data} alt={proiect.nume}/>
                       </AspectRatio>
                     </Box>
                   ))}
@@ -156,6 +157,7 @@ if (status === "authenticated") {
                         height="100%"
                         muted={true}
                         src={proiect.video}
+                        alt={proiect.nume}
                       />
                     </AspectRatio>
                   </Box>
@@ -194,7 +196,7 @@ if (status === "authenticated") {
                 </AlertDialogHeader>
 
                 <AlertDialogBody>
-                  Esti sigur ca vrei sa stergi proiectul '{proiect.nume}'?
+                  Esti sigur ca vrei sa stergi proiectul {proiect.nume}?
                 </AlertDialogBody>
 
                 <AlertDialogFooter>

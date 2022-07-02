@@ -53,7 +53,7 @@ export default function Index({ senzor }) {
 
             {(() => {
               if (!senzor.video) {
-                return <Image src={senzor.imagine1} />;
+                return <Image src={senzor.imagine1} alt={senzor.nume}/>;
               }
             })()}
 
@@ -62,7 +62,7 @@ export default function Index({ senzor }) {
                 return (
                   <Carousel showThumbs={false}>
                     <Box>
-                      <Image src={senzor.imagine1} />
+                      <Image src={senzor.imagine1} alt={senzor.nume}/>
                     </Box>
                     <Box>
                       <AspectRatio ratio={16 / 9} maxW="100%">
@@ -71,6 +71,7 @@ export default function Index({ senzor }) {
                           height="100%"
                           muted={true}
                           src={senzor.video}
+                          alt={senzor.nume}
                         />
                       </AspectRatio>
                     </Box>
@@ -99,7 +100,7 @@ export default function Index({ senzor }) {
 
             {(() => {
               if (!senzor.video) {
-                return <Image src={senzor.imagine1} />;
+                return <Image src={senzor.imagine1} alt={senzor.nume}/>;
               }
             })()}
 
@@ -108,7 +109,7 @@ export default function Index({ senzor }) {
                 return (
                   <Carousel showThumbs={false}>
                     <Box>
-                      <Image src={senzor.imagine1} />
+                      <Image src={senzor.imagine1} alt={senzor.nume}/>
                     </Box>
                     <Box>
                       <AspectRatio ratio={16 / 9} maxW="100%">
@@ -117,6 +118,7 @@ export default function Index({ senzor }) {
                           height="100%"
                           muted={true}
                           src={senzor.video}
+                          alt={senzor.nume}
                         />
                       </AspectRatio>
                     </Box>
@@ -145,7 +147,7 @@ export default function Index({ senzor }) {
                 </AlertDialogHeader>
 
                 <AlertDialogBody>
-                  Esti sigur ca vrei sa stergi senzorul '{senzor.nume}'?
+                  Esti sigur ca vrei sa stergi senzorul {senzor.nume}?
                 </AlertDialogBody>
 
                 <AlertDialogFooter>

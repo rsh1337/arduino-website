@@ -83,7 +83,7 @@ export default function Index({ lectie }) {
                 </AlertDialogHeader>
 
                 <AlertDialogBody>
-                  Esti sigur ca vrei sa stergi lectia '{lectie.nume}'?
+                  Esti sigur ca vrei sa stergi lectia {lectie.nume}?
                 </AlertDialogBody>
 
                 <AlertDialogFooter>
