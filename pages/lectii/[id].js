@@ -41,7 +41,7 @@ export default function Index({ lectie }) {
         <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
           <Heading mb={10}>{lectie.nume}</Heading>
           <Box>
-            <AspectRatio ratio={16 / 9} maxW="100%">
+            <AspectRatio ratio={4 / 3}>
               <iframe
                 src={lectie.link}
                 webkitallowfullscreen="true"
