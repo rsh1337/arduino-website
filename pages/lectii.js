@@ -75,7 +75,7 @@ function Content() {
 
                 <Center>
                   {(() => {
-                    if (lectie.link) {
+                    if (!lectie.link == "") {
                       return (
                         <NextLink href={lectie.link}>
                           <Button colorScheme="blue" size="sm" mt={4}>
@@ -86,7 +86,7 @@ function Content() {
                     }
                   })()}
                   {(() => {
-                    if (lectie.linkteste) {
+                    if (!lectie.linkteste == "") {
                       return (
                         <NextLink href={`lectii/${lectie._id}`}>
                           <Button colorScheme="blue" size="sm" mt={4}>

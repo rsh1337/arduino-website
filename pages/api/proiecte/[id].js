@@ -1,28 +1,60 @@
+import { getSession } from "next-auth/react";
 import dbConnect from "../../../lib/dbConnect";
 import Proiecte from "../../../models/Proiecte";
 
 export default async function handler(req, res) {
+  const session = await getSession({ req });
   const {
     query: { id },
     method,
   } = req;
 
   await dbConnect();
-
-  switch (method) {
-    case "GET":
-      try {
-        const proiecte = await Proiecte.findById(id);
-        if (!proiecte) {
-          return res.status(404).json({ success: false });
+  if (session) {
+    switch (method) {
+      case "GET":
+        try {
+          const proiecte = await Proiecte.findById(id);
+          if (!proiecte) {
+            return res.status(404).json({ success: false });
+          }
+          res.status(200).json({ success: true, data: proiecte });
+        } catch (error) {
+          res.status(400).json({ success: false });
         }
-        res.status(200).json({ success: true, data: proiecte });
-      } catch (error) {
+        break;
+      case "DELETE":
+        try {
+          const deleteproiect = await Proiecte.deleteOne({ _id: id });
+          if (!deleteproiect) {
+            return res.status(400).json({ success: false });
+          }
+          res.status(200).json({ success: true, data: {} });
+        } catch (error) {
+          res.status(400).json({ success: false });
+        }
+        break;
+      default:
         res.status(400).json({ success: false });
-      }
-      break;
-    default:
-      res.status(400).json({ success: false });
-      break;
+        break;
+    }
+    console.log("Session", JSON.stringify(session, null, 2));
+  } else {
+    switch (method) {
+      case "GET":
+        try {
+          const proiecte = await Proiecte.findById(id);
+          if (!proiecte) {
+            return res.status(404).json({ success: false });
+          }
+          res.status(200).json({ success: true, data: proiecte });
+        } catch (error) {
+          res.status(400).json({ success: false });
+        }
+        break;
+      default:
+        res.status(400).json({ success: false });
+        break;
+    }
   }
 }

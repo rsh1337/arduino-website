@@ -2,20 +2,14 @@ import {
   Button,
   Center,
   Container,
-  FormControl,
-  FormHelperText,
-  FormLabel,
   Heading,
-  Input,
   Tab,
   TabList,
   TabPanel,
   TabPanels,
   Tabs,
-  useToast,
 } from "@chakra-ui/react";
 import { signOut } from "next-auth/react";
-import { useState } from "react";
 import CreateInvitatie from "./create_invitatie";
 import CreateLectie from "./create_lectie";
 import CreateProiecte from "./create_proiecte";
@@ -29,7 +23,7 @@ export default function Adminpage() {
         </Center>
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
-            <Tab>Creaza senzor</Tab>
+            <Tab>Creaza Senzor</Tab>
             <Tab>Creaza Proiect</Tab>
             <Tab>Creaza Lectie</Tab>
             <Tab>Creaza Invitatie</Tab>
@@ -48,6 +42,7 @@ export default function Adminpage() {
               <CreateInvitatie />
             </TabPanel>
           </TabPanels>
+          
         </Tabs>
         <Center>
           <Button mt={6} colorScheme="teal" onClick={() => signOut()}>
