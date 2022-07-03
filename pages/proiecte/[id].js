@@ -9,6 +9,7 @@ import {
   Box,
   Button,
   Code,
+  Collapse,
   Container,
   FormControl,
   FormLabel,
@@ -97,7 +98,7 @@ function EditProiect({
       });
     }
     if (data.messagee == "success") {
-      Router.push(`/proiecte/${proiectID}`)
+      Router.push(`/proiecte/${proiectID}`);
       return toast({
         title: "Proiect Editat.",
         description: "Proiectul a fost editat cu succes!",
@@ -279,7 +280,8 @@ function DeleteProiect({ numeProiect }) {
 
 export default function Index({ proiect }) {
   const { status } = useSession();
-
+  const [show, setShow] = React.useState(false);
+  const handleToggle = () => setShow(!show);
   if (status === "unauthenticated") {
     return (
       <Layout title="Arduino :: Proiecte">
@@ -341,12 +343,19 @@ export default function Index({ proiect }) {
                 return (
                   <>
                     <Heading>Cod Utilizat</Heading>
-                    <Code whiteSpace="pre-line">{proiect.cod_folosit}</Code>
+                    <Code whiteSpace="pre-line">
+                      <Collapse startingHeight={100} in={show}>
+                        {proiect.cod_folosit}
+                      </Collapse>
+                    </Code>
                   </>
                 );
               }
             })()}
           </Stack>
+          <Button size="sm" onClick={handleToggle} mt="1rem">
+            Afiseaza Mai {show ? "Putin" : "Mult"}
+          </Button>
         </Container>
       </Layout>
     );
@@ -413,12 +422,19 @@ export default function Index({ proiect }) {
                 return (
                   <>
                     <Heading>Cod Utilizat</Heading>
-                    <Code whiteSpace="pre-line">{proiect.cod_folosit}</Code>
+                    <Code whiteSpace="pre-line">
+                      <Collapse startingHeight={100} in={show}>
+                        {proiect.cod_folosit}
+                      </Collapse>
+                    </Code>
                   </>
                 );
               }
             })()}
           </Stack>
+          <Button size="sm" onClick={handleToggle} mt="1rem">
+            Afiseaza Mai {show ? "Putin" : "Mult"}
+          </Button>
           <HStack>
             <DeleteProiect numeProiect={proiect.nume} />
             <EditProiect

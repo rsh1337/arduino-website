@@ -9,6 +9,7 @@ import {
   Box,
   Button,
   Code,
+  Collapse,
   Container,
   FormControl,
   FormLabel,
@@ -51,7 +52,7 @@ function EditSenzor({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const toast = useToast();
   // Data
-  const [nume, setNume] = useState( numeSenzor );
+  const [nume, setNume] = useState(numeSenzor);
   const [descriere, setDescriere] = useState(descriereSenzor);
   const [descrieremini, setDescrieremini] = useState(descriereminiSenzor);
   const [utilizare, setUtilizare] = useState(utilizareSenzor);
@@ -101,7 +102,7 @@ function EditSenzor({
       });
     }
     if (data.messagee == "success") {
-      Router.push(`/senzori/${senzorID}`)
+      Router.push(`/senzori/${senzorID}`);
       return toast({
         title: "Senzor Editat.",
         description: "Senzorul a fost editat cu succes!",
@@ -293,6 +294,8 @@ function DeleteSenzor({ numeSenzor }) {
 }
 
 export default function Index({ senzor }) {
+  const [show, setShow] = React.useState(false);
+  const handleToggle = () => setShow(!show);
   const { status } = useSession();
   if (status === "unauthenticated") {
     return (
@@ -333,10 +336,15 @@ export default function Index({ senzor }) {
               }
             })()}
             <Heading>Cod Utilizat</Heading>
-            <Code id="foo" whiteSpace="pre-line">
-              {senzor.utilizare}
+            <Code whiteSpace="pre-line">
+            <Collapse startingHeight={100} in={show}>
+                {senzor.utilizare}
+            </Collapse>
             </Code>
           </Stack>
+          <Button size="sm" onClick={handleToggle} mt="1rem">
+              Afiseaza Mai {show ? "Putin" : "Mult"}
+            </Button>
         </Container>
       </Layout>
     );
@@ -380,10 +388,15 @@ export default function Index({ senzor }) {
               }
             })()}
             <Heading>Cod Utilizat</Heading>
-            <Code id="foo" whiteSpace="pre-line">
-              {senzor.utilizare}
+            <Code whiteSpace="pre-line">
+            <Collapse startingHeight={100} in={show}>
+                {senzor.utilizare}
+            </Collapse>
             </Code>
           </Stack>
+          <Button size="sm" onClick={handleToggle} mt="1rem">
+              Afiseaza Mai {show ? "Putin" : "Mult"}
+            </Button>
           <HStack>
             <DeleteSenzor numeSenzor={senzor.nume} />
             <EditSenzor
