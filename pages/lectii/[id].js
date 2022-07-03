@@ -65,6 +65,7 @@ function EditModal({ numeLectie, imagineLectie, linkLectie }) {
       });
     }
     if (data.messagee == "success") {
+      Router.push(`/lectii/${lectieID}`)
       return toast({
         title: "Lectie Editata.",
         description: "Lectia a fost editata cu succes!",
@@ -80,7 +81,7 @@ function EditModal({ numeLectie, imagineLectie, linkLectie }) {
         Editeaza Lectia
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Editeaza Lectia</ModalHeader>

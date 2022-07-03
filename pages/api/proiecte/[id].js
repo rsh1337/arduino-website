@@ -23,6 +23,20 @@ export default async function handler(req, res) {
           res.status(400).json({ success: false });
         }
         break;
+        case "PUT":
+          try {
+            const updateProiect = await Proiecte.findByIdAndUpdate(id, req.body, {
+              new: true,
+              runValidators: true,
+            });
+            if (!updateProiect) {
+              return res.status(400).json({ message: 'Proiectul nu a putut fi editata' });
+            }
+            res.status(200).json({ messagee: 'success', data: updateProiect });
+          } catch (error) {
+            res.status(400).json({ message: 'Proiectul nu a putut fi editata' });
+          }
+          break;
       case "DELETE":
         try {
           const deleteproiect = await Proiecte.deleteOne({ _id: id });
