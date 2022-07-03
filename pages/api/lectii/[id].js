@@ -23,6 +23,20 @@ export default async function handler(req, res) {
           res.status(400).json({ success: false });
         }
         break;
+      case "PUT":
+        try {
+          const updateLectie = await Lectii.findByIdAndUpdate(id, req.body, {
+            new: true,
+            runValidators: true,
+          });
+          if (!updateLectie) {
+            return res.status(400).json({ message: 'Lectia nu a putut fi editata' });
+          }
+          res.status(200).json({ messagee: 'success', data: updateLectie });
+        } catch (error) {
+          res.status(400).json({ message: 'Lectia nu a putut fi editata' });
+        }
+        break;
       case "DELETE":
         try {
           const deletelectie = await Lectii.deleteOne({ _id: id });
