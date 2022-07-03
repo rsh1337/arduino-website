@@ -23,6 +23,20 @@ export default async function handler(req, res) {
           res.status(400).json({ success: false });
         }
         break;
+        case "PUT":
+          try {
+            const updateSenzor = await Senzori.findByIdAndUpdate(id, req.body, {
+              new: true,
+              runValidators: true,
+            });
+            if (!updateSenzor) {
+              return res.status(400).json({ message: 'Senzorul nu a putut fi editata' });
+            }
+            res.status(200).json({ messagee: 'success', data: updateSenzor });
+          } catch (error) {
+            res.status(400).json({ message: 'Senzorul nu a putut fi editata' });
+          }
+          break;
       case "DELETE":
         try {
           const deleteSenzor = await Senzori.deleteOne({ _id: id });

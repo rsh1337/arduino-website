@@ -5,6 +5,7 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Textarea,
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -87,7 +88,7 @@ export default function CreateProiecte() {
           <FormLabel htmlFor="descriere" mt={10}>
             descriere
           </FormLabel>
-          <Input
+          <Textarea
             id="descriere"
             type="descriere"
             name="descriere"
@@ -97,7 +98,7 @@ export default function CreateProiecte() {
           <FormLabel htmlFor="descrieremini" mt={10}>
             descrieremini
           </FormLabel>
-          <Input
+          <Textarea
             id="descrieremini"
             type="descrieremini"
             name="descrieremini"
@@ -107,7 +108,7 @@ export default function CreateProiecte() {
           <FormLabel htmlFor="utilizare" mt={10}>
             utilizare
           </FormLabel>
-          <Input
+          <Textarea
             id="utilizare"
             type="utilizare"
             name="utilizare"
@@ -117,7 +118,7 @@ export default function CreateProiecte() {
           <FormLabel htmlFor="imagini" mt={10}>
             imagini
           </FormLabel>
-          <Input
+          <Textarea
             id="imagini"
             type="imagini"
             name="imagini"
@@ -137,7 +138,7 @@ export default function CreateProiecte() {
           <FormLabel htmlFor="cod_folosit" mt={10}>
             Cod Folosit
           </FormLabel>
-          <Input
+          <Textarea
             id="cod_folosit"
             type="cod_folosit"
             name="cod_folosit"

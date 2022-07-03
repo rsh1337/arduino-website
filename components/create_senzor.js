@@ -5,6 +5,7 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Textarea,
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -88,7 +89,7 @@ export default function CreateSenzor() {
           <FormLabel htmlFor="descriere" mt={10}>
             descriere
           </FormLabel>
-          <Input
+          <Textarea
             id="descriere"
             type="descriere"
             name="descriere"
@@ -98,7 +99,7 @@ export default function CreateSenzor() {
           <FormLabel htmlFor="descrieremini" mt={10}>
             descrieremini
           </FormLabel>
-          <Input
+          <Textarea
             id="descrieremini"
             type="descrieremini"
             name="descrieremini"
@@ -108,7 +109,7 @@ export default function CreateSenzor() {
           <FormLabel htmlFor="utilizare" mt={10}>
             utilizare
           </FormLabel>
-          <Input
+          <Textarea
             id="utilizare"
             type="utilizare"
             name="utilizare"
