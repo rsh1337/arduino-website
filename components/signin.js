@@ -47,7 +47,7 @@ export default function Signinfuncton(){
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <Button mt={6} colorScheme="teal" type="submit">
+                  <Button mt={6} colorScheme="green" type="submit">
                     Conecteaza-te
                   </Button>
                 </form>

@@ -93,7 +93,7 @@ export default function Registerfunction() {
 
           <Button
             mt={6}
-            colorScheme="teal"
+            colorScheme="green"
             onClick={(e) => registerUser(email, password, nume, invitation, e)}
           >
             Inregistreaza-te

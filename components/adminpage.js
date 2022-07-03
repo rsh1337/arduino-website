@@ -45,7 +45,7 @@ export default function Adminpage() {
           
         </Tabs>
         <Center>
-          <Button mt={6} colorScheme="teal" onClick={() => signOut()}>
+          <Button mt={6} colorScheme="red" onClick={() => signOut()}>
             Deconecteaza-te
           </Button>
         </Center>
