@@ -337,14 +337,14 @@ export default function Index({ senzor }) {
             })()}
             <Heading>Cod Utilizat</Heading>
             <Code whiteSpace="pre-line">
-            <Collapse startingHeight={100} in={show}>
+              <Collapse startingHeight={100} in={show}>
                 {senzor.utilizare}
-            </Collapse>
+              </Collapse>
             </Code>
-          </Stack>
-          <Button size="sm" onClick={handleToggle} mt="1rem">
+            <Button size="sm" onClick={handleToggle} mt="1rem">
               Afiseaza Mai {show ? "Putin" : "Mult"}
             </Button>
+          </Stack>
         </Container>
       </Layout>
     );
@@ -389,14 +389,14 @@ export default function Index({ senzor }) {
             })()}
             <Heading>Cod Utilizat</Heading>
             <Code whiteSpace="pre-line">
-            <Collapse startingHeight={100} in={show}>
+              <Collapse startingHeight={100} in={show}>
                 {senzor.utilizare}
-            </Collapse>
+              </Collapse>
             </Code>
-          </Stack>
-          <Button size="sm" onClick={handleToggle} mt="1rem">
+            <Button size="sm" onClick={handleToggle} mt="1rem">
               Afiseaza Mai {show ? "Putin" : "Mult"}
             </Button>
+          </Stack>
           <HStack>
             <DeleteSenzor numeSenzor={senzor.nume} />
             <EditSenzor

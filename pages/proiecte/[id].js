@@ -348,14 +348,14 @@ export default function Index({ proiect }) {
                         {proiect.cod_folosit}
                       </Collapse>
                     </Code>
+                    <Button size="sm" onClick={handleToggle} mt="1rem">
+                      Afiseaza Mai {show ? "Putin" : "Mult"}
+                    </Button>
                   </>
                 );
               }
             })()}
           </Stack>
-          <Button size="sm" onClick={handleToggle} mt="1rem">
-            Afiseaza Mai {show ? "Putin" : "Mult"}
-          </Button>
         </Container>
       </Layout>
     );
@@ -427,14 +427,14 @@ export default function Index({ proiect }) {
                         {proiect.cod_folosit}
                       </Collapse>
                     </Code>
+                    <Button size="sm" onClick={handleToggle} mt="1rem">
+                      Afiseaza Mai {show ? "Putin" : "Mult"}
+                    </Button>
                   </>
                 );
               }
             })()}
           </Stack>
-          <Button size="sm" onClick={handleToggle} mt="1rem">
-            Afiseaza Mai {show ? "Putin" : "Mult"}
-          </Button>
           <HStack>
             <DeleteProiect numeProiect={proiect.nume} />
             <EditProiect
