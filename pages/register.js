@@ -32,7 +32,7 @@ export default function Index() {
 
   if (status === "unauthenticated") {
     return (
-      <Layout title="Arduino :: Dashboard">
+      <Layout title="Arduino :: Dashboard" displayy="none">
         <Registerfunction/>
       </Layout>
     );

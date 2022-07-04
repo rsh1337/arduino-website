@@ -1,6 +1,8 @@
 import { Button, IconButton } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import {
   Box,
   Center,
@@ -14,6 +16,10 @@ import {
   Divider,
 } from "@chakra-ui/layout";
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -127,7 +133,7 @@ function Navbar() {
   );
 }
 
-export default function Layout({ title, children }) {
+export default function Layout({ title, children, displayy }) {
   return (
     <>
       <Head>
@@ -135,6 +141,22 @@ export default function Layout({ title, children }) {
       </Head>
       <Grid minH="100vh">
         <VStack align="stretch" w="full" spacing={3}>
+          
+          <Alert status="info" display={displayy}>
+            <AlertIcon />
+            <VStack w="full">
+            <AlertTitle>This is a demo</AlertTitle>
+            <AlertDescription>
+            In order to log in to the admin account you have to
+            enter <Link href="/admin" passHref>arduinodemo.rares-andrei.me/admin <ExternalLinkIcon/></Link>.
+            </AlertDescription>
+            <AlertDescription>
+            In order to register a new
+            account an invitation must be generated from the admin account and
+            it must be placed on <Link href="/register" passHref>arduinodemo.rares-andrei.me/register <ExternalLinkIcon/></Link>
+            </AlertDescription>
+            </VStack>
+          </Alert>
           <Navbar />
           <Box as="main" h="full">
             {children}
