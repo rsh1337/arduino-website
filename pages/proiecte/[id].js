@@ -299,7 +299,7 @@ export default function Index({ proiect }) {
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
                         {/* <AspectRatio ratio={16 / 9} maxW="100%"> */}
-                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080} priority/>
                         {/* </AspectRatio> */}
                       </Box>
                     ))}
@@ -315,7 +315,7 @@ export default function Index({ proiect }) {
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
                         {/* <AspectRatio> */}
-                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080} priority/>
                         {/* </AspectRatio> */}
                       </Box>
                     ))}
@@ -378,7 +378,7 @@ export default function Index({ proiect }) {
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
                         {/* <AspectRatio ratio={16 / 9} maxW="100%"> */}
-                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080} priority/>
                         {/* </AspectRatio> */}
                       </Box>
                     ))}
@@ -394,7 +394,7 @@ export default function Index({ proiect }) {
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
                         {/* <AspectRatio ratio={16 / 9} maxW="100%"> */}
-                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080} priority/>
                         {/* </AspectRatio> */}
                       </Box>
                     ))}

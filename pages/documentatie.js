@@ -179,6 +179,7 @@ function Content() {
                   alt="Arduino"
                   width={1920}
                   height={1080}
+                  priority
                 />
               </Box>
 
@@ -194,6 +195,7 @@ function Content() {
                   alt="Conectare USB"
                   width={1920}
                   height={1080}
+                  priority
                 />
               </Box>
 
