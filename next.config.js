@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['content.instructables.com', 'i.imgur.com'],
+    domains: ['content.instructables.com', 'i.imgur.com', 'makeawebsitehub.com', 'cdn-wordpress-info.futurelearn.com', 'blog.nexuria.ro'],
   },
 }
 

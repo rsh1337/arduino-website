@@ -9,6 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/layout";
 import { Button, LightMode } from "@chakra-ui/react";
+import Image from "next/image";
 import NextLink from "next/link";
 
 import Layout from "../components/layouts";
@@ -58,16 +59,17 @@ function Content() {
               overflow="hidden"
               p={4}
             >
-              <Heading size="lg">INVETI PROGRAMARE</Heading>
+              <Heading size="md">DEZVOLTI CREATIVITATEA</Heading>
               <Center mt={6}>
-                <Text>
+                <Image src="https://blog.nexuria.ro/wp-content/uploads/2019/07/cum-iti-dezvolti-creativitatea.jpg" width={1920} height={1080}/>
+                {/* <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Aenean et tortor at risus viverra adipiscing at in.
                   Scelerisque mauris pellentesque pulvinar pellentesque
                   habitant. Ac turpis egestas sed tempus urna et. Ultricies mi
                   eget mauris pharetra et ultrices neque ornare aenean.
-                </Text>
+                </Text> */}
               </Center>
             </Box>
             <Box
@@ -77,16 +79,17 @@ function Content() {
               overflow="hidden"
               p={4}
             >
-              <Heading size="lg">INVETI SA FACI ROBOTI</Heading>
+              <Heading size="md">INVETI SA FACI ROBOTI</Heading>
               <Center mt={6}>
-                <Text>
+                <Image src="https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/Robot_Blog_Header_1500x750.png" width={1920} height={1080} />
+                {/* <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Aenean et tortor at risus viverra adipiscing at in.
                   Scelerisque mauris pellentesque pulvinar pellentesque
                   habitant. Ac turpis egestas sed tempus urna et. Ultricies mi
                   eget mauris pharetra et ultrices neque ornare aenean.
-                </Text>
+                </Text> */}
               </Center>
             </Box>
             <Box
@@ -96,16 +99,17 @@ function Content() {
               overflow="hidden"
               p={4}
             >
-              <Heading size="lg">INVETI PROGRAMARE</Heading>
+              <Heading size="md">INVETI PROGRAMARE</Heading>
               <Center mt={6}>
-                <Text>
+                <Image src="https://makeawebsitehub.com/wp-content/uploads/2016/02/learn-code-e1455713167295.jpg" width={1920} height={1080}/>
+                {/* <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Aenean et tortor at risus viverra adipiscing at in.
                   Scelerisque mauris pellentesque pulvinar pellentesque
                   habitant. Ac turpis egestas sed tempus urna et. Ultricies mi
                   eget mauris pharetra et ultrices neque ornare aenean.
-                </Text>
+                </Text> */}
               </Center>
             </Box>
           </Stack>
