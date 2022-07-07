@@ -15,7 +15,6 @@ import {
   FormLabel,
   Heading,
   HStack,
-  Image,
   Input,
   Modal,
   ModalBody,
@@ -38,6 +37,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Layout from "../../components/layouts";
 import dbConnect from "../../lib/dbConnect";
 import Senzori from "../../models/Senzori";
+import Image from "next/image";
 
 function EditSenzor({
   numeSenzor,
@@ -309,7 +309,7 @@ export default function Index({ senzor }) {
 
             {(() => {
               if (!senzor.video) {
-                return <Image src={senzor.imagine1} alt={senzor.nume} />;
+                return <Image src={senzor.imagine1} alt={senzor.nume} width={1920} height={1080}/>;
               }
             })()}
 
@@ -318,7 +318,7 @@ export default function Index({ senzor }) {
                 return (
                   <Carousel showThumbs={false}>
                     <Box>
-                      <Image src={senzor.imagine1} alt={senzor.nume} />
+                      <Image src={senzor.imagine1} alt={senzor.nume} width={1920} height={1080}/>
                     </Box>
                     <Box>
                       <AspectRatio ratio={16 / 9} maxW="100%">
@@ -361,7 +361,7 @@ export default function Index({ senzor }) {
 
             {(() => {
               if (!senzor.video) {
-                return <Image src={senzor.imagine1} alt={senzor.nume} />;
+                return <Image src={senzor.imagine1} alt={senzor.nume} width={1920} height={1080}/>;
               }
             })()}
 
@@ -370,7 +370,7 @@ export default function Index({ senzor }) {
                 return (
                   <Carousel showThumbs={false}>
                     <Box>
-                      <Image src={senzor.imagine1} alt={senzor.nume} />
+                      <Image src={senzor.imagine1} alt={senzor.nume} width={1920} height={1080}/>
                     </Box>
                     <Box>
                       <AspectRatio ratio={16 / 9} maxW="100%">

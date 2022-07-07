@@ -19,16 +19,16 @@ function Content() {
       <Container>
         <Center pt={200}>
           <HStack>
-            <Heading size={{ base: "xl", md: "2xl" }} color="gray.600">
+            <Heading size={{ base: "md", sm: "lg", md: "xl", lg:"2xl" }} color="gray.600">
               INVATA ARDUINO
             </Heading>
-            <Heading size={{ base: "xl", md: "2xl" }} color="blue.500">
+            <Heading size={{ base: "md", sm: "lg", md: "xl", lg:"2xl" }} color="blue.500">
               USOR
             </Heading>
           </HStack>
         </Center>
         <Center>
-          <Heading size={{ base: "xl", md: "2xl" }} color="gray.600">
+          <Heading size={{ base: "md", sm: "lg", md: "xl", lg:"2xl" }} color="gray.600">
             IMPREUNA CU NOI
           </Heading>
         </Center>

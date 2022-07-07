@@ -33,17 +33,6 @@ export default function Index() {
   if (status === "unauthenticated") {
     return (
       <Layout title="Arduino :: Dashboard" displayy="none">
-                  <Alert status="info">
-            <AlertIcon />
-            <VStack w="full">
-            <AlertDescription>
-              Email: demo@rares-andrei.me
-            </AlertDescription>
-            <AlertDescription>
-              Password: demo
-            </AlertDescription>
-            </VStack>
-          </Alert>
         <Signinfuncton/>
       </Layout>
     );

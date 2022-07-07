@@ -9,7 +9,6 @@ import {
   Divider,
   Flex,
   Heading,
-  Image,
   Link,
   Text,
   VStack,
@@ -19,6 +18,7 @@ import NextLink from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import Image from "next/image";
 
 function Content() {
   return (
@@ -157,7 +157,7 @@ function Content() {
         <Flex>
           <Box flex="1" display={{ base: "none", lg: "flex" }}></Box>
           <Divider
-            height="419rem"
+            height="355rem"
             orientation="vertical"
             display={{ base: "none", lg: "flex" }}
             ml={2}
@@ -174,7 +174,12 @@ function Content() {
                 creati diferite proiecte cu o singura placa.
               </Text>
               <Box>
-                <Image src="arduino.png" alt="Arduino" />
+                <Image
+                  src="/arduino.png"
+                  alt="Arduino"
+                  width={1920}
+                  height={1080}
+                />
               </Box>
 
               <Heading id="conectare-usb">Conectare USB</Heading>
@@ -184,7 +189,12 @@ function Content() {
                 asemenea placa poate fi alimentata prin acest port.
               </Text>
               <Box>
-                <Image src="conectare_usb.jpeg" alt="Conectare USB" />
+                <Image
+                  src="/conectare_usb.jpeg"
+                  alt="Conectare USB"
+                  width={1920}
+                  height={1080}
+                />
               </Box>
 
               <Heading id="alimentare-externa">Alimentarea externa</Heading>
@@ -194,7 +204,12 @@ function Content() {
                 placa.
               </Text>
               <Box>
-                <Image src="alimentare_externa.jpeg" alt="Alimentare Externa" />
+                <Image
+                  src="/alimentare_externa.jpeg"
+                  alt="Alimentare Externa"
+                  width={1920}
+                  height={1080}
+                />
               </Box>
 
               <Heading id="pini-de-intrare-analog">
@@ -207,7 +222,12 @@ function Content() {
                 intr-o valoare digitala pentru a putea fi citit de sistem.
               </Text>
               <Box>
-                <Image src="pini_in_analog.jpeg" alt="Intrare analog" />
+                <Image
+                  src="/pini_in_analog.jpeg"
+                  alt="Intrare analog"
+                  width={1920}
+                  height={1080}
+                />
               </Box>
 
               <Heading id="pini-de-intrare-iesire-digitala">
@@ -222,8 +242,10 @@ function Content() {
               </Text>
               <Box>
                 <Image
-                  src="pini_io_digitala.jpeg"
+                  src="/pini_io_digitala.jpeg"
                   alt="Intrare/iesire digitala"
+                  width={1920}
+                  height={1080}
                 />
               </Box>
 
@@ -233,10 +255,15 @@ function Content() {
                 Acesta este folositor cand codul pe care il avem nu se repeta.
               </Text>
               <Box>
-                <Image src="buton_reset.jpeg" alt="Buton Reset" />
+                <Image
+                  src="/buton_reset.jpeg"
+                  alt="Buton Reset"
+                  width={1920}
+                  height={1080}
+                />
               </Box>
 
-              <Divider zIndex="hide"/>
+              <Divider zIndex="hide" />
               <Heading id="instalare-arduino-ide">
                 Instalare Arduino IDE
               </Heading>
@@ -250,59 +277,109 @@ function Content() {
               </Link>
               <Carousel showThumbs={false}>
                 <Box>
-                  <Image src="ide-1.jpeg" alt="Instalare IDE Pasul 1"/>
+                  <Image
+                    src="/ide-1.jpeg"
+                    alt="Instalare IDE Pasul 1"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">Apasam pe butonul SOFTWARE</Text>
                 </Box>
                 <Box>
-                  <Image src="ide-2.jpeg" alt="Instalare IDE Pasul 2"/>
+                  <Image
+                    src="/ide-2.jpeg"
+                    alt="Instalare IDE Pasul 2"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam click pe prima optiune de download
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-3.jpeg" alt="Instalare IDE Pasul 3"/>
+                  <Image
+                    src="/ide-3.jpeg"
+                    alt="Instalare IDE Pasul 3"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe butonul unde scrie JUST DOWNLOAD si dechidem
                     aplicatia
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-4.jpeg" alt="Instalare IDE Pasul 4"/>
+                  <Image
+                    src="/ide-4.jpeg"
+                    alt="Instalare IDE Pasul 4"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Acceptam termenii si conditiile apasand pe butonul I Agree
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-5.jpeg" alt="Instalare IDE Pasul 5"/>
+                  <Image
+                    src="/ide-5.jpeg"
+                    alt="Instalare IDE Pasul 5"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">Apasam pe butonul Next</Text>
                 </Box>
                 <Box>
-                  <Image src="ide-6.jpeg" alt="Instalare IDE Pasul 6"/>
+                  <Image
+                    src="/ide-6.jpeg"
+                    alt="Instalare IDE Pasul 6"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
                 <Box>
-                  <Image src="ide-7.jpeg" alt="Instalare IDE Pasul 7"/>
+                  <Image
+                    src="/ide-7.jpeg"
+                    alt="Instalare IDE Pasul 7"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-8.jpeg" alt="Instalare IDE Pasul 8"/>
+                  <Image
+                    src="/ide-8.jpeg"
+                    alt="Instalare IDE Pasul 8"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-9.jpeg" alt="Instalare IDE Pasul 9"/>
+                  <Image
+                    src="/ide-9.jpeg"
+                    alt="Instalare IDE Pasul 9"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
                     necesare
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="ide-10.jpeg" alt="Instalare IDE Pasul 10"/>
+                  <Image
+                    src="/ide-10.jpeg"
+                    alt="Instalare IDE Pasul 10"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe butonul close si o sa gasim aplicatia pe desktop
                   </Text>
@@ -317,7 +394,10 @@ function Content() {
                 pentru a face posibila utilizarea aplicatiei Arduino IDE cu
                 aceasta
               </Text>
-              <Link href="https://www.win-rar.com/download.html?&L=0" isExternal>
+              <Link
+                href="https://www.win-rar.com/download.html?&L=0"
+                isExternal
+              >
                 In acest tutorial a mai fost folosita aplicatia WinRAR
                 <ExternalLinkIcon mx="2px" />
               </Link>
@@ -330,40 +410,75 @@ function Content() {
               </Link>
               <Carousel showThumbs={false}>
                 <Box>
-                  <Image src="driver-1.jpeg" alt="Instalare Driver Clona Arduino Pasul 1"/>
+                  <Image
+                    src="/driver-1.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 1"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam click pe textul albastru unde scrie Windows CH340
                     Driver
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-2.jpeg" alt="Instalare Driver Clona Arduino Pasul 2"/>
+                  <Image
+                    src="/driver-2.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 2"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">Apasam click pe Extract to</Text>
                 </Box>
                 <Box>
-                  <Image src="driver-3.jpeg" alt="Instalare Driver Clona Arduino Pasul 3"/>
+                  <Image
+                    src="/driver-3.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 3"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe ok si mergem in folderul de downloads
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-4.jpeg" alt="Instalare Driver Clona Arduino Pasul 4"/>
+                  <Image
+                    src="/driver-4.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 4"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Intram in folderul care a fost extras din fisier
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-5.jpeg" alt="Instalare Driver Clona Arduino Pasul 5"/>
+                  <Image
+                    src="/driver-5.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 5"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam dublu click pe aplicatie
                   </Text>
                 </Box>
                 <Box>
-                  <Image src="driver-6.jpeg" alt="Instalare Driver Clona Arduino Pasul 6"/>
+                  <Image
+                    src="/driver-6.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 6"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
                 <Box>
-                  <Image src="driver-7.jpeg" alt="Instalare Driver Clona Arduino Pasul 7"/>
+                  <Image
+                    src="/driver-7.jpeg"
+                    alt="Instalare Driver Clona Arduino Pasul 7"
+                    width={1920}
+                    height={1080}
+                  />
                   <Text className="legend">
                     Apasam pe OK si iesim din aplicatie apasand butonul X
                   </Text>

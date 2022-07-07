@@ -15,7 +15,6 @@ import {
   FormLabel,
   Heading,
   HStack,
-  Image,
   Input,
   Modal,
   ModalBody,
@@ -38,6 +37,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import Router from "next/router";
+import Image from "next/image";
 
 function EditProiect({
   numeProiect,
@@ -298,9 +298,9 @@ export default function Index({ proiect }) {
                   <Carousel showThumbs={false}>
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
-                        <AspectRatio ratio={16 / 9} maxW="100%">
-                          <Image src={data} alt={proiect.nume} />
-                        </AspectRatio>
+                        {/* <AspectRatio ratio={16 / 9} maxW="100%"> */}
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
+                        {/* </AspectRatio> */}
                       </Box>
                     ))}
                   </Carousel>
@@ -314,9 +314,9 @@ export default function Index({ proiect }) {
                   <Carousel>
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
-                        <AspectRatio ratio={16 / 9} maxW="100%">
-                          <Image src={data} alt={proiect.nume} />
-                        </AspectRatio>
+                        {/* <AspectRatio> */}
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
+                        {/* </AspectRatio> */}
                       </Box>
                     ))}
                     <Box>
@@ -378,7 +378,7 @@ export default function Index({ proiect }) {
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
                         <AspectRatio ratio={16 / 9} maxW="100%">
-                          <Image src={data} alt={proiect.nume} />
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
                         </AspectRatio>
                       </Box>
                     ))}
@@ -394,7 +394,7 @@ export default function Index({ proiect }) {
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
                         <AspectRatio ratio={16 / 9} maxW="100%">
-                          <Image src={data} alt={proiect.nume} />
+                          <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
                         </AspectRatio>
                       </Box>
                     ))}

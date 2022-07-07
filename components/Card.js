@@ -1,26 +1,26 @@
 import {
-    Box,
-    Button,
-    ButtonGroup,
-    Center,
-    Image,
-    Popover,
-    PopoverArrow,
-    PopoverBody,
-    PopoverCloseButton,
-    PopoverContent,
-    PopoverHeader,
-    PopoverTrigger,
-    useDisclosure,
-    AlertDialog,
-    AlertDialogBody,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogContent,
-    AlertDialogOverlay,
-  } from "@chakra-ui/react";
-  import React from "react";
-  import NextLink from "next/link"
+  Box,
+  Button,
+  ButtonGroup,
+  Center,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
+  useDisclosure,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from "@chakra-ui/react";
+import React from "react";
+import NextLink from "next/link";
+import Image from "next/image";
 
 export default function Card({ imagine, nume, descriere, hlink }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,7 +28,8 @@ export default function Card({ imagine, nume, descriere, hlink }) {
 
   return (
     <Box borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden">
-      <Image src={imagine} alt={nume} />
+      <Image src={imagine} alt={nume} width={1024}
+        height={720} />
 
       <Box p="6">
         <Box
@@ -95,9 +96,9 @@ export default function Card({ imagine, nume, descriere, hlink }) {
             </Button>
 
             <NextLink href={`/${hlink}`} passHref>
-            <Button colorScheme="blue" size="sm" mt={4}>
-              Deschide Pagina
-            </Button>
+              <Button colorScheme="blue" size="sm" mt={4}>
+                Deschide Pagina
+              </Button>
             </NextLink>
           </ButtonGroup>
         </Center>
