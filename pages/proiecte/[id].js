@@ -377,9 +377,9 @@ export default function Index({ proiect }) {
                   <Carousel showThumbs={false}>
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
-                        <AspectRatio ratio={16 / 9} maxW="100%">
+                        {/* <AspectRatio ratio={16 / 9} maxW="100%"> */}
                           <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
-                        </AspectRatio>
+                        {/* </AspectRatio> */}
                       </Box>
                     ))}
                   </Carousel>
@@ -393,9 +393,9 @@ export default function Index({ proiect }) {
                   <Carousel>
                     {proiect.imagini.map((data, index) => (
                       <Box key={index}>
-                        <AspectRatio ratio={16 / 9} maxW="100%">
+                        {/* <AspectRatio ratio={16 / 9} maxW="100%"> */}
                           <Image src={data} alt={proiect.nume} width={1920} height={1080}/>
-                        </AspectRatio>
+                        {/* </AspectRatio> */}
                       </Box>
                     ))}
                     <Box>
