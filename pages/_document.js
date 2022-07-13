@@ -7,15 +7,12 @@ class MyDocument extends Document {
 				<Head>
 					<link rel="manifest" href="/manifest.json" />
 					<link rel="icon" type="image/png" sizes="196x196" href="icons/favicon-196.png"/>
-					<link rel="apple-touch-icon" href="/logo-128x128.png" />
 					<link rel="theme-color" href="#fff" />
 					<link
 						rel="apple-touch-icon"
 						href="icons/apple-icon-180.png"
 					/>
-
 					<meta name="apple-mobile-web-app-capable" content="yes" />
-
 					<link
 						rel="apple-touch-startup-image"
 						href="icons/apple-splash-2048-2732.jpg"
