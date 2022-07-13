@@ -20,16 +20,31 @@ function Content() {
       <Container>
         <Center pt={200}>
           <HStack>
-            <Heading size={{ base: "md", sm: "lg", md: "xl", lg:"2xl" }} color="gray.600">
-              INVATA ARDUINO
+            <Heading
+              size={{ base: "md", sm: "lg", md: "xl", lg: "2xl" }}
+              color="gray.600"
+            >
+              INVATA
             </Heading>
-            <Heading size={{ base: "md", sm: "lg", md: "xl", lg:"2xl" }} color="blue.500">
+            <Heading
+              size={{ base: "md", sm: "lg", md: "xl", lg: "2xl" }}
+              color="gray.600"
+            >
+              ARDUINO
+            </Heading>
+            <Heading
+              size={{ base: "md", sm: "lg", md: "xl", lg: "2xl" }}
+              color="blue.500"
+            >
               USOR
             </Heading>
           </HStack>
         </Center>
         <Center>
-          <Heading size={{ base: "md", sm: "lg", md: "xl", lg:"2xl" }} color="gray.600">
+          <Heading
+            size={{ base: "md", sm: "lg", md: "xl", lg: "2xl" }}
+            color="gray.600"
+          >
             IMPREUNA CU NOI
           </Heading>
         </Center>
@@ -61,7 +76,12 @@ function Content() {
             >
               <Heading size="md">DEZVOLTI CREATIVITATEA</Heading>
               <Center mt={6}>
-                <Image src="https://blog.nexuria.ro/wp-content/uploads/2019/07/cum-iti-dezvolti-creativitatea.jpg" width={1920} height={1080} alt="dezvolti creativitatea"/>
+                <Image
+                  src="https://blog.nexuria.ro/wp-content/uploads/2019/07/cum-iti-dezvolti-creativitatea.jpg"
+                  width={1920}
+                  height={1080}
+                  alt="dezvolti creativitatea"
+                />
                 {/* <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -81,7 +101,12 @@ function Content() {
             >
               <Heading size="md">INVETI SA FACI ROBOTI</Heading>
               <Center mt={6}>
-                <Image src="https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/Robot_Blog_Header_1500x750.png" width={1920} height={1080} alt="Faci roboti"/>
+                <Image
+                  src="https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/Robot_Blog_Header_1500x750.png"
+                  width={1920}
+                  height={1080}
+                  alt="Faci roboti"
+                />
                 {/* <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -101,7 +126,12 @@ function Content() {
             >
               <Heading size="md">INVETI PROGRAMARE</Heading>
               <Center mt={6}>
-                <Image src="https://makeawebsitehub.com/wp-content/uploads/2016/02/learn-code-e1455713167295.jpg" width={1920} height={1080} alt="programezi"/>
+                <Image
+                  src="https://makeawebsitehub.com/wp-content/uploads/2016/02/learn-code-e1455713167295.jpg"
+                  width={1920}
+                  height={1080}
+                  alt="programezi"
+                />
                 {/* <Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -121,8 +151,8 @@ function Content() {
 
 export default function Home() {
   return (
-      <Layout title="Arduino :: Home">
-        <Content />
-      </Layout>
+    <Layout title="Arduino :: Home">
+      <Content />
+    </Layout>
   );
 }
