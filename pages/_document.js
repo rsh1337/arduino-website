@@ -6,6 +6,7 @@ class MyDocument extends Document {
 			<Html>
 				<Head>
 					<link rel="manifest" href="/manifest.json" />
+					<link rel="icon" type="image/png" sizes="196x196" href="icons/favicon-196.png"/>
 					<link rel="apple-touch-icon" href="/logo-128x128.png" />
 					<link rel="theme-color" href="#fff" />
 					<link

@@ -138,6 +138,7 @@ export default function Layout({ title, children, displayy }) {
     <>
       <Head>
         <title>{title}</title>
+        <link rel="icon" type="image/png" sizes="196x196" href="icons/favicon-196.png"/>
       </Head>
       <Grid minH="100vh">
         <VStack align="stretch" w="full" spacing={3}>
