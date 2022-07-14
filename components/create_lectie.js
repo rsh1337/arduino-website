@@ -78,7 +78,7 @@ export default function CreateLectie() {
 						onChange={(e) => setImagine(e.target.value)}
 					/>
 					<FormHelperText>
-						Imaginile trebuie mai intai sa fie urcate pe '<Link href='https://imgur.com' target="_blank">https://imgur.com</Link>'.
+						Imaginile trebuie mai intai sa fie urcate pe <Link href='https://imgur.com' target="_blank">https://imgur.com</Link>
 					</FormHelperText>
 					<FormLabel htmlFor="link" mt={10}>
 						Link

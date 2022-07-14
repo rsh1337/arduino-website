@@ -126,10 +126,10 @@ export default function CreateProiecte() {
 						onChange={(e) => setImagini(e.target.value.split(','))}
 					/>
 					<FormHelperText>
-						Imaginile trebuie mai intai sa fie urcate pe '<Link href='https://imgur.com' target="_blank">https://imgur.com</Link>'.
+						Imaginile trebuie mai intai sa fie urcate pe <Link href='https://imgur.com' target="_blank">https://imgur.com</Link>.
 					</FormHelperText>
           <FormHelperText>
-            Daca sunt mai multe imagini se pune ',' intre link-uri.
+            Daca sunt mai multe imagini se pune , intre link-uri.
 					</FormHelperText>
 					<FormLabel htmlFor="video" mt={10}>
 						video
