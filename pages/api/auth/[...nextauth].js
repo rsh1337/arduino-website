@@ -1,14 +1,10 @@
 import NextAuth from "next-auth";
-// import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
-// import clientPromise from "../../../lib/mongodb"
 import CredentialsProvider from "next-auth/providers/credentials";
-// import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
 import Admin from "../../../models/Admin";
 import dbConnect from "../../../lib/dbConnect";
 
 export default NextAuth({
-  // adapter: MongoDBAdapter(clientPromise),
   session: {
     jwt: true,
   },

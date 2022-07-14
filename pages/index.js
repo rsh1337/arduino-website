@@ -23,13 +23,13 @@ function Content() {
 					<HStack>
 						<Heading
 							size={{ base: 'md', sm: 'lg', md: 'xl', lg: '2xl' }}
-							color="gray.600"
+							color="blue.500"
 						>
 							INVATA
 						</Heading>
 						<Heading
 							size={{ base: 'md', sm: 'lg', md: 'xl', lg: '2xl' }}
-							color="gray.600"
+							color="blue.500"
 						>
 							ARDUINO
 						</Heading>
@@ -49,20 +49,20 @@ function Content() {
 						IMPREUNA CU NOI
 					</Heading>
 				</Center>
-				<Center mt={7}>
-					<Text>
-						Bine aţi venit! Vă invităm să intraţi în lumea unică
-						Arduino pentru a învăţa elementele de bază ale modului
-						în care funcţionează senzorii şi cum se poate realiza un
-						proiect rapid.
+					<Text mt={7}>
+						Bine ai venit!
 					</Text>
-				</Center>
+					<Text>
+						Te invităm să intri în lumea unică
+						Arduino pentru a învăţa elementele de bază ale acestei platforme, utilizata in intreaga lume.
+					</Text>
 				<Text>Vei învăţa:</Text>
 				<Text> - ce este Arduino</Text>
 				<Text> - cum se conectează</Text>
 				<Text> - cum se instalează</Text>
 				<Text> - cum se folosesc senzorii</Text>
 				<Text> - vei putea studia exemple de proiecte</Text>
+				<Text> - iti vei putea verifica cunostiintele acumulate utilizand testele pe care le-am pregatit pentru tine</Text>
 				<NextLink href="/documentatie" passHref>
 					<Center mt={10}>
 						<Button colorScheme="green">Incepe acum</Button>

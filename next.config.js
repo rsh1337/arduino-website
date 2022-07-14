@@ -7,6 +7,6 @@ module.exports = withPWA({
 		skipWaiting: true
 	},
   images: {
-    domains: ['content.instructables.com', 'i.imgur.com'],
+    domains: ['i.imgur.com'],
   },
 });

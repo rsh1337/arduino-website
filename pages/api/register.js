@@ -45,6 +45,18 @@ export default async function handler(req, res) {
             message: "Scrie o parola.",
           });
         }
+        if (!admin.email.includes("@")){
+          console.log("Invalid Email")
+          return res.status(400).json({
+            message: "Scrie un email valid.",
+          });
+        }
+        if (!admin.nume){
+          console.log("No Name")
+          return res.status(400).json({
+            message: "Scrie un nume.",
+          });
+        }
         const salt = bcrypt.genSaltSync(saltRounds);
         admin.password = await bcrypt.hashSync(password, salt);
 
