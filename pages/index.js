@@ -92,6 +92,8 @@ function Content() {
 										width={1920}
 										height={1080}
 										alt="dezvolti creativitatea"
+										placeholder="blur"
+										blurDataURL={`/_next/image?url=/dezvolti-creativitatea.jpeg&w=16&q=1`}
 									/>
 								</Center>
 							</Box>
@@ -113,6 +115,8 @@ function Content() {
 										width={1920}
 										height={1080}
 										alt="Faci roboti"
+										placeholder="blur"
+										blurDataURL={`/_next/image?url=/inveti-sa-faci-roboti.jpeg&w=16&q=1`}
 									/>
 								</Center>
 							</Box>
@@ -132,6 +136,8 @@ function Content() {
 										width={1920}
 										height={1080}
 										alt="programezi"
+										placeholder="blur"
+										blurDataURL={`/_next/image?url=/inveti-programare.png&w=16&q=1`}
 									/>
 								</Center>
 							</Box>

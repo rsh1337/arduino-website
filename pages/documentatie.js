@@ -180,6 +180,8 @@ function Content() {
                   width={1920}
                   height={1080}
                   priority
+                  placeholder="blur"
+                  blurDataURL={`/_next/image?url=/arduino.png&w=16&q=1`}
                 />
               </Box>
 
@@ -196,6 +198,8 @@ function Content() {
                   width={1920}
                   height={1080}
                   priority
+                  placeholder="blur"
+                  blurDataURL={`/_next/image?url=/conectare_usb.jpeg&w=16&q=1`}
                 />
               </Box>
 
@@ -211,6 +215,8 @@ function Content() {
                   alt="Alimentare Externa"
                   width={1920}
                   height={1080}
+                  placeholder="blur"
+                  blurDataURL={`/_next/image?url=/alimentare_externa.jpeg&w=16&q=1`}
                 />
               </Box>
 
@@ -229,6 +235,8 @@ function Content() {
                   alt="Intrare analog"
                   width={1920}
                   height={1080}
+                  placeholder="blur"
+                  blurDataURL={`/_next/image?url=/pini_in_analog.jpeg&w=16&q=1`}
                 />
               </Box>
 
@@ -248,6 +256,8 @@ function Content() {
                   alt="Intrare/iesire digitala"
                   width={1920}
                   height={1080}
+                  placeholder="blur"
+                  blurDataURL={`/_next/image?url=/pini_io_digitala.jpeg&w=16&q=1`}
                 />
               </Box>
 
@@ -262,6 +272,8 @@ function Content() {
                   alt="Buton Reset"
                   width={1920}
                   height={1080}
+                  placeholder="blur"
+                  blurDataURL={`/_next/image?url=/buton_reset.jpeg&w=16&q=1`}
                 />
               </Box>
 
@@ -284,6 +296,8 @@ function Content() {
                     alt="Instalare IDE Pasul 1"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-1.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">Apasam pe butonul SOFTWARE</Text>
                 </Box>
@@ -293,6 +307,8 @@ function Content() {
                     alt="Instalare IDE Pasul 2"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-2.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam click pe prima optiune de download
@@ -304,6 +320,8 @@ function Content() {
                     alt="Instalare IDE Pasul 3"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-3.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe butonul unde scrie JUST DOWNLOAD si dechidem
@@ -316,6 +334,8 @@ function Content() {
                     alt="Instalare IDE Pasul 4"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-4.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Acceptam termenii si conditiile apasand pe butonul I Agree
@@ -327,6 +347,8 @@ function Content() {
                     alt="Instalare IDE Pasul 5"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-5.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">Apasam pe butonul Next</Text>
                 </Box>
@@ -336,6 +358,8 @@ function Content() {
                     alt="Instalare IDE Pasul 6"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-6.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
@@ -345,6 +369,8 @@ function Content() {
                     alt="Instalare IDE Pasul 7"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-7.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
@@ -357,6 +383,8 @@ function Content() {
                     alt="Instalare IDE Pasul 8"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-8.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
@@ -369,6 +397,8 @@ function Content() {
                     alt="Instalare IDE Pasul 9"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-9.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe butonul Install pentru a instala driverele
@@ -381,6 +411,8 @@ function Content() {
                     alt="Instalare IDE Pasul 10"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/ide-10.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe butonul close si o sa gasim aplicatia pe desktop
@@ -417,6 +449,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 1"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-1.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam click pe textul albastru unde scrie Windows CH340
@@ -429,6 +463,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 2"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-2.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">Apasam click pe Extract to</Text>
                 </Box>
@@ -438,6 +474,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 3"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-3.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe ok si mergem in folderul de downloads
@@ -449,6 +487,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 4"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-4.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Intram in folderul care a fost extras din fisier
@@ -460,6 +500,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 5"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-5.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam dublu click pe aplicatie
@@ -471,6 +513,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 6"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-6.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">Apasam pe butonul Install</Text>
                 </Box>
@@ -480,6 +524,8 @@ function Content() {
                     alt="Instalare Driver Clona Arduino Pasul 7"
                     width={1920}
                     height={1080}
+                    placeholder="blur"
+                    blurDataURL={`/_next/image?url=/driver-7.jpeg&w=16&q=1`}
                   />
                   <Text className="legend">
                     Apasam pe OK si iesim din aplicatie apasand butonul X
