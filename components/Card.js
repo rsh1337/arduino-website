@@ -28,7 +28,7 @@ export default function Card({ imagine, nume, descriere, hlink }) {
 
   return (
     <Box borderWidth={1} borderRadius="lg" maxW="sm" overflow="hidden">
-      <Image src={imagine} alt={nume} width={1024} height={720} layout="intrinsic" quality={30}/>
+      <Image src={imagine} alt={nume} width={1024} height={720} layout="intrinsic" loading="eager" quality={30}/>
 
       <Box p="6">
         <Box
