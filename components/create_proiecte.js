@@ -20,6 +20,7 @@ export default function CreateProiecte() {
 	const [descrieremini, setDescrieremini] = useState('');
 	const [utilizare, setUtilizare] = useState('');
 	const [imagini, setImagini] = useState('');
+	const [imagine1, setImagine1] = useState('');
 	const [video, setVideo] = useState('');
 	const [cod_folosit, setCod_folosit] = useState('');
 	//
@@ -28,6 +29,7 @@ export default function CreateProiecte() {
 		descriere,
 		descrieremini,
 		utilizare,
+		imagine1,
 		imagini,
 		video,
 		cod_folosit,
@@ -44,6 +46,7 @@ export default function CreateProiecte() {
 				descriere,
 				descrieremini,
 				utilizare,
+				imagine1,
 				imagini,
 				video,
 				cod_folosit
@@ -115,6 +118,16 @@ export default function CreateProiecte() {
 						value={utilizare}
 						onChange={(e) => setUtilizare(e.target.value)}
 					/>
+					<FormLabel htmlFor="imagine1" mt={10}>
+						Imagine Coperta
+					</FormLabel>
+					<Input
+						id="imagine1"
+						type="imagine1"
+						name="imagine1"
+						value={imagine1}
+						onChange={(e) => setImagine1(e.target.value)}
+					/>
 					<FormLabel htmlFor="imagini" mt={10}>
 						imagini
 					</FormLabel>
@@ -126,10 +139,14 @@ export default function CreateProiecte() {
 						onChange={(e) => setImagini(e.target.value.split(','))}
 					/>
 					<FormHelperText>
-						Imaginile trebuie mai intai sa fie urcate pe <Link href='https://imgur.com' target="_blank">https://imgur.com</Link>.
+						Imaginile trebuie mai intai sa fie urcate pe{' '}
+						<Link href="https://imgur.com" target="_blank">
+							https://imgur.com
+						</Link>
+						.
 					</FormHelperText>
-          <FormHelperText>
-            Daca sunt mai multe imagini se pune , intre link-uri.
+					<FormHelperText>
+						Daca sunt mai multe imagini se pune , intre link-uri.
 					</FormHelperText>
 					<FormLabel htmlFor="video" mt={10}>
 						video
@@ -160,6 +177,7 @@ export default function CreateProiecte() {
 								descriere,
 								descrieremini,
 								utilizare,
+								imagine1,
 								imagini,
 								video,
 								cod_folosit,

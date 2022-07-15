@@ -17,6 +17,10 @@ const ProiecteSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    imagine1: {
+        type: String,
+        required: true
+    },
     imagini: {
         type: Array,
         required: true
