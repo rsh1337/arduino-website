@@ -6,7 +6,11 @@ module.exports = withPWA({
 		register: true,
 		skipWaiting: true
 	},
-  images: {
-    domains: ['i.imgur.com'],
-  },
+	images: {
+		domains: ['i.imgur.com'],
+	},
+	i18n: {
+		locales: ['ro'],
+		defaultLocale: 'ro'
+	}
 });

@@ -1,11 +1,12 @@
-import { Box, Center, Container, SimpleGrid, Skeleton } from "@chakra-ui/react";
-import React from "react";
+import { Box, Center, Container, Input, SimpleGrid, Skeleton } from "@chakra-ui/react";
+import React, { useState } from "react";
 import useSWR from "swr";
 import Card from "../components/Card";
 import Layout from "../components/layouts";
 import { fetcher } from "../lib/fetcher";
 
 function Content() {
+  const [search, setSearch] = useState("");
   const { data, error } = useSWR("/api/senzori/senzori", fetcher);
   if (error) return <div>Failed to load</div>;
   if (!data) {
@@ -30,18 +31,31 @@ function Content() {
   }
   return (
     <Container maxW={{ base: "container.xl" }} mt={10} mb={10}>
+      <Container maxW="container.sm" mb={10}>
+      <Input type="text" placeholder="Cauta..." onChange={(event) => {
+        setSearch(event.target.value)
+      }}/>
+      </Container>
       <Center>
         <SimpleGrid columns={{ base: "1", md: "2", lg: "3" }} spacing={3}>
-          {data.senzori.map((senzor) => (
-            <Box key={senzor._id}>
+          {data.senzori.filter((val)=>{
+            if (search == "") {
+              return val 
+            } else if (val.nume.toLowerCase().includes(search.toLowerCase())){
+              return val
+            }
+          }).map((val, key)=>{
+            return(
+              <Box key={key}>
               <Card
-                imagine={senzor.imagine1}
-                nume={senzor.nume}
-                descriere={senzor.descrieremini}
-                hlink={`senzori/${senzor._id}`}
+                imagine={val.imagine1}
+                nume={val.nume}
+                descriere={val.descrieremini}
+                hlink={`senzori/${val._id}`}
               />
             </Box>
-          ))}
+            )
+          })}
         </SimpleGrid>
       </Center>
     </Container>
