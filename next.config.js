@@ -1,11 +1,9 @@
-const withPWA = require('next-pwa');
-
+const withPWA = require('next-pwa')({
+	dest: 'public',
+	register: true,
+	skipWaiting: true
+});
 module.exports = withPWA({
-	pwa: {
-		dest: 'public',
-		register: true,
-		skipWaiting: true
-	},
 	images: {
 		domains: ['i.imgur.com'],
 	},
