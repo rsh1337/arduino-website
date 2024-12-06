@@ -1,4 +1,6 @@
 import {
+	Button,
+	LightMode,
 	Box,
 	Container,
 	Heading,
@@ -8,8 +10,7 @@ import {
 	Stack,
 	Flex,
 	VStack
-} from '@chakra-ui/layout';
-import { Button, LightMode } from '@chakra-ui/react';
+} from '@chakra-ui/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 
@@ -49,20 +50,23 @@ function Content() {
 						IMPREUNA CU NOI
 					</Heading>
 				</Center>
-					<Text mt={7}>
-						Bine ai venit!
-					</Text>
-					<Text>
-						Te invităm să intri în lumea unică
-						Arduino pentru a învăţa elementele de bază ale acestei platforme, utilizata in intreaga lume.
-					</Text>
+				<Text mt={7}>Bine ai venit!</Text>
+				<Text>
+					Te invităm să intri în lumea unică Arduino pentru a învăţa
+					elementele de bază ale acestei platforme, utilizata in
+					intreaga lume.
+				</Text>
 				<Text>Vei învăţa:</Text>
 				<Text> - ce este Arduino</Text>
 				<Text> - cum se conectează</Text>
 				<Text> - cum se instalează</Text>
 				<Text> - cum se folosesc senzorii</Text>
 				<Text> - vei putea studia exemple de proiecte</Text>
-				<Text> - iti vei putea verifica cunostiintele acumulate utilizand testele pe care le-am pregatit pentru tine</Text>
+				<Text>
+					{' '}
+					- iti vei putea verifica cunostiintele acumulate utilizand
+					testele pe care le-am pregatit pentru tine
+				</Text>
 				<NextLink href="/documentatie" passHref>
 					<Center mt={10}>
 						<Button colorScheme="green">Incepe acum</Button>

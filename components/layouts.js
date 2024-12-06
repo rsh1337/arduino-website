@@ -1,4 +1,4 @@
-import { Button, IconButton } from '@chakra-ui/button';
+import { Button, IconButton } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/hooks';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/react';
@@ -15,7 +15,7 @@ import {
 	VStack,
 	Flex,
 	Divider
-} from '@chakra-ui/layout';
+} from '@chakra-ui/react';
 import {
 	Alert,
 	AlertDescription,
